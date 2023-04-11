@@ -1,16 +1,18 @@
 import { render } from "react-dom";
 
-import { GlobalStyles } from "./App.styled";
-import ColourList from "./components/colour-list/colour-list";
-import Header from "./components/header/header";
+import { AppWrapper, Content, GlobalStyles } from "./App.styled";
+import Navigation from "./components/navigation/navigation";
+import Homegape from "./pages/homepage";
 
 const App = () => {
   return (
-    <div>
+    <AppWrapper>
       <GlobalStyles />
-      <Header />
-      <ColourList />
-    </div>
+      <Navigation />
+      <Content>
+        <Homegape />
+      </Content>
+    </AppWrapper>
   );
 };
 

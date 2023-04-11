@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 import brandNames from "../../data/brandNames";
@@ -129,6 +130,10 @@ const Colour = ({ colour }) => {
       </ColourBG>
     </ColourWrapper>
   );
+};
+
+Colour.propTypes = {
+  colour: PropTypes.object,
 };
 
 export default Colour;

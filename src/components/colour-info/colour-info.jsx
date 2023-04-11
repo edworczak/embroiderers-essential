@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+import * as PropType from "prop-types";
+
 import {
   ColourBrand,
   ColourInfoWrapper,
@@ -28,6 +31,14 @@ const ColourInfo = ({ brand, number, accurate }) => {
       </TextWrapper>
     </ColourInfoWrapper>
   );
+};
+
+ColourInfo.propTypes = {
+  brand: PropTypes.string,
+  number: PropTypes.objectOf(
+    PropTypes.oneOfType([PropType.string, PropType.array])
+  ),
+  accurate: PropTypes.bool,
 };
 
 export default ColourInfo;
