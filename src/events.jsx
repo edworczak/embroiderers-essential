@@ -7,4 +7,13 @@ const searchListener = {
   },
 };
 
-export default searchListener;
+export const openProjectsCounterListener = {
+  on(event, callback) {
+    document.addEventListener(event, (e) => callback(e.detail));
+  },
+  dispatch(event, data) {
+    document.dispatchEvent(new CustomEvent(event, { detail: data }));
+  },
+};
+
+export default [openProjectsCounterListener, searchListener];

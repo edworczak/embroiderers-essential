@@ -1,8 +1,8 @@
-# thread-colours-substitutes
+# embroiderer-essential
 
 This is a simple application to find colours substitutes among different brands.
 
-[Go to demo page](https://edworczak.github.io/thread-colours-substitutes/)
+[Go to demo page](https://edworczak.github.io/embroiderer-essential/)
 
 ## Development
 
