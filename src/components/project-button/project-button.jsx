@@ -5,6 +5,7 @@ import IconButton from "../icon-button/icon-button";
 import {
   ProjectButtonStyled,
   ProjectImage,
+  ProjectInfoWrapper,
   ProjectTitle,
 } from "./project-button.styled";
 
@@ -15,10 +16,11 @@ const ProjectButton = ({ project }) => {
 
   return (
     <ProjectButtonStyled>
-      <ProjectImage imgURL={BG}>
-        <IconButton icon={faHourglass} />
-      </ProjectImage>
-      <ProjectTitle>{project.name}</ProjectTitle>
+      <ProjectImage imgURL={BG} />
+      <ProjectInfoWrapper>
+        <ProjectTitle>{project.name}</ProjectTitle>
+        <IconButton icon={faHourglass} text={"start"} border={true} />
+      </ProjectInfoWrapper>
     </ProjectButtonStyled>
   );
 };

@@ -5,24 +5,30 @@ import { theme } from "../../shared-styles/theme.styled";
 export const ProjectButtonStyled = styled.a`
   background: ${theme.colours.kashmir};
   border-radius: ${theme.decorations.borderRadiusDefault};
+  display: flex;
   flex-shrink: 0;
   margin: ${theme.sizes.spacings.default};
   overflow: hidden;
-  width: 200px;
+  width: auto;
 `;
 
 export const ProjectImage = styled.div`
   background: ${(props) => `url(${props.imgURL})` || theme.colours.kashmir};
+  background-position: center;
   background-size: cover;
-  height: 200px;
+  height: 100%;
   position: relative;
-  width: 100%;
+  width: 50px;
 
   button {
     bottom: 0;
     position: absolute;
     right: 0;
   }
+`;
+
+export const ProjectInfoWrapper = styled.div`
+  padding: ${theme.sizes.spacings.small};
 `;
 
 export const ProjectTitle = styled.h3`
