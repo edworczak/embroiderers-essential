@@ -2,15 +2,23 @@ import { faHourglass } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 
 import IconButton from "../icon-button/icon-button";
-import { ProjectButtonStyled, ProjectImage } from "./project-button.styled";
+import {
+  ProjectButtonStyled,
+  ProjectImage,
+  ProjectTitle,
+} from "./project-button.styled";
 
 const ProjectButton = ({ project }) => {
+  const BG = project.img
+    ? project.img
+    : new URL("../../assets/img/empty-project.jpeg", import.meta.url);
+
   return (
     <ProjectButtonStyled>
-      <ProjectImage imgURL={project.img}>
+      <ProjectImage imgURL={BG}>
         <IconButton icon={faHourglass} />
       </ProjectImage>
-      <h3>{project.name}</h3>
+      <ProjectTitle>{project.name}</ProjectTitle>
     </ProjectButtonStyled>
   );
 };

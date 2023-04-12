@@ -33,6 +33,16 @@ const dummyUser = {
       time: "24:31",
       img: new URL("../assets/img/demo/prj0004.jpeg", import.meta.url),
     },
+    prj0005: {
+      id: "prj0005",
+      name: "Krowa",
+      startDate: "10.04.2023",
+      time: "5:12",
+    },
+    prj0006: {
+      id: "prj0006",
+      name: "Krowa w górach",
+    },
   },
   shoppingList: {
     items: 12,
