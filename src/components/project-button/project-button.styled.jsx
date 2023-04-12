@@ -7,7 +7,7 @@ export const ProjectButtonStyled = styled.a`
 	border-radius: ${theme.decorations.borderRadiusDefault};
 	display: flex;
 	flex-shrink: 0;
-	margin: ${theme.sizes.spacings.default};
+	margin: 0 ${theme.sizes.spacings.default};
 	overflow: hidden;
 	width: auto;
 `;

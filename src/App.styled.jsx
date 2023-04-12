@@ -45,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
     h1, h2, h3 {
       font-family: ${theme.typography.fontFamilyHeader};
       font-weight: ${theme.typography.fontWeight.header};
-      margin: 0 0 ${theme.sizes.spacings.default};
+      margin: 0 0 ${theme.sizes.spacings.small};
     }
     
     h1 {
@@ -72,6 +72,6 @@ export const Content = styled.div`
 `;
 
 export const Section = styled.section`
-	margin-bottom: ${theme.sizes.spacings.default};
+	margin-bottom: ${theme.sizes.spacings.big};
 	width: 100%;
 `;
