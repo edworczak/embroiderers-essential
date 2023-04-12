@@ -11,7 +11,7 @@ export const ProjectButtonStyled = styled.div`
 	overflow: hidden;
 	position: relative;
 	width: auto;
-	
+
 	> button {
 		position: absolute;
 		right: 0;
@@ -56,7 +56,7 @@ export const ProjectTitle = styled.h3`
 export const Timer = styled.p`
 	color: ${theme.colours.dark};
 	margin-bottom: ${theme.sizes.spacings.small};
-	
+
 	svg {
 		margin-right: ${theme.sizes.spacings.small};
 	}

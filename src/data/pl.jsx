@@ -4,6 +4,15 @@ const pl = {
 		name: "Zamienniki Kolorów Mulin",
 		search: "Wyszukaj",
 	},
+	navigation: {
+		home: "home",
+		settings: "ustawienia",
+		back: "wstecz",
+		profile: "profil",
+		search: "szukaj",
+		help: "pomoc",
+		close: "zamknij",
+	},
 	home: {
 		welcome: "cześć,",
 		openProjectsWelcome: {

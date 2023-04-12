@@ -8,7 +8,7 @@ const App = () => {
 	return (
 		<AppWrapper>
 			<GlobalStyles />
-			<Navigation />
+			<Navigation homepage={true} />
 			<Content>
 				<Homepage />
 			</Content>

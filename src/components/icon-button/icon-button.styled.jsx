@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import { theme } from "../../shared-styles/theme.styled";
 
 export const IconButtonStyled = styled.button`
-	align-items: center;
 	background: transparent;
 	border: ${(props) =>
 		props.$border ? `2px solid ${theme.colours.CTA}` : "none"};
@@ -11,7 +10,7 @@ export const IconButtonStyled = styled.button`
 	display: flex;
 	font-size: ${theme.typography.fontSize.default};
 	height: 50px;
-	justify-content: center;
+	justify-content: right;
 	padding: 14px;
 	width: ${(props) => (props.$text ? "auto" : "50px")};
 
@@ -34,13 +33,12 @@ export const IconButtonStyled = styled.button`
 		`}
 
 	span {
+		padding-right: ${theme.sizes.spacings.default};
 		white-space: nowrap;
 	}
 
 	svg {
 		height: 100%;
-		${(props) =>
-			props.$text ? `margin-left: ${theme.sizes.spacings.small}` : ""};
-		width: 100%;
+		width: 22px;
 	}
 `;
