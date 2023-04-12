@@ -62,16 +62,16 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const AppWrapper = styled.div`
-  display: flex;
-  padding-left: ${theme.sizes.spacings.navWidth};
+	display: flex;
+	padding-left: ${theme.sizes.spacings.navWidth};
 `;
 
 export const Content = styled.div`
-  padding: ${theme.sizes.spacings.big};
-  width: 100%;
+	padding: ${theme.sizes.spacings.big};
+	width: 100%;
 `;
 
 export const Section = styled.section`
-  margin-bottom: ${theme.sizes.spacings.default};
-  width: 100%;
+	margin-bottom: ${theme.sizes.spacings.default};
+	width: 100%;
 `;

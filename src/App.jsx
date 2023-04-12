@@ -5,15 +5,15 @@ import Navigation from "./components/navigation/navigation";
 import Homepage from "./pages/homepage";
 
 const App = () => {
-  return (
-    <AppWrapper>
-      <GlobalStyles />
-      <Navigation />
-      <Content>
-        <Homepage />
-      </Content>
-    </AppWrapper>
-  );
+	return (
+		<AppWrapper>
+			<GlobalStyles />
+			<Navigation />
+			<Content>
+				<Homepage />
+			</Content>
+		</AppWrapper>
+	);
 };
 
 render(<App />, document.getElementById("root"));

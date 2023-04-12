@@ -4,15 +4,15 @@ import IconButton from "../icon-button/icon-button";
 import { NavigationWrapper } from "./navigation.styled";
 
 const Navigation = () => {
-  return (
-    <NavigationWrapper>
-      <div></div>
-      <div>
-        <IconButton icon={faSearch} />
-        <IconButton icon={faBars} />
-      </div>
-    </NavigationWrapper>
-  );
+	return (
+		<NavigationWrapper>
+			<div></div>
+			<div>
+				<IconButton icon={faSearch} />
+				<IconButton icon={faBars} />
+			</div>
+		</NavigationWrapper>
+	);
 };
 
 export default Navigation;

@@ -3,5 +3,6 @@
   "tabWidth": 2,
   "importOrder": ["^components/(.*)$", "^[./]" ],
   "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSortSpecifiers": true,
+  "useTabs": true,
 }
