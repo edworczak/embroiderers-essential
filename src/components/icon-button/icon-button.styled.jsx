@@ -19,8 +19,12 @@ export const IconButtonStyled = styled.button`
 		props.$border &&
 		css`
 			border-radius: 25px;
-			padding: 14px ${theme.sizes.spacings.big};
+			padding: 14px ${theme.sizes.spacings.default};
 		`}
+
+	span {
+		white-space: nowrap;
+	}
 
 	svg {
 		height: 100%;

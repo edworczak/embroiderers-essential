@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
 
-export const ProjectButtonStyled = styled.a`
+export const ProjectButtonStyled = styled.div`
 	background: ${theme.colours.kashmir};
 	border-radius: ${theme.decorations.borderRadiusDefault};
 	display: flex;
@@ -12,25 +12,24 @@ export const ProjectButtonStyled = styled.a`
 	width: auto;
 `;
 
-export const ProjectImage = styled.div`
-	background: ${(props) => `url(${props.imgURL})` || theme.colours.kashmir};
+export const ProjectImage = styled.a`
+	background: ${(props) =>
+		`url(${props.$projectImage})` || theme.colours.kashmir};
 	background-position: center;
 	background-size: cover;
 	height: 100%;
 	position: relative;
 	width: 50px;
-
-	button {
-		bottom: 0;
-		position: absolute;
-		right: 0;
-	}
 `;
 
 export const ProjectInfoWrapper = styled.div`
-	padding: ${theme.sizes.spacings.small};
+	padding: ${theme.sizes.spacings.default};
+
+	button {
+		margin-bottom: ${theme.sizes.spacings.small};
+	}
 `;
 
 export const ProjectTitle = styled.h3`
-	margin: ${theme.sizes.spacings.small};
+	margin-bottom: ${theme.sizes.spacings.small};
 `;

@@ -9,7 +9,7 @@ const IconButton = (props) => {
 
 	return (
 		<IconButtonStyled $border={border} $text={!!text}>
-			{text}
+			<span>{text}</span>
 			<FontAwesomeIcon icon={icon} color={colour || theme.colours.CTA} />
 		</IconButtonStyled>
 	);

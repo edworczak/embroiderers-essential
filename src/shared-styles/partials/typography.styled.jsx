@@ -6,7 +6,7 @@ export const typography = {
 		link: baseColours.CTA,
 		linkHover: baseColours.CTAHover,
 	},
-	fontFamily: "'Roboto', sans-serif",
+	fontFamily: "'Raleway', sans-serif",
 	fontFamilyHeader: "'Sacramento', cursive",
 	fontSize: {
 		default: "14px",

@@ -10,16 +10,16 @@ import {
 } from "./project-button.styled";
 
 const ProjectButton = ({ project }) => {
-	const BG = project.img
+	const projectImage = project.img
 		? project.img
 		: new URL("../../assets/img/empty-project.jpeg", import.meta.url);
 
 	return (
 		<ProjectButtonStyled>
-			<ProjectImage imgURL={BG} />
+			<ProjectImage $projectImage={projectImage} />
 			<ProjectInfoWrapper>
 				<ProjectTitle>{project.name}</ProjectTitle>
-				<IconButton icon={faHourglass} text={"start"} border={true} />
+				<IconButton icon={faHourglass} text={"zacznij sesję"} border={true} />
 			</ProjectInfoWrapper>
 		</ProjectButtonStyled>
 	);

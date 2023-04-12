@@ -4,26 +4,7 @@ import styled from "styled-components";
 import { theme } from "./shared-styles/theme.styled";
 
 export const GlobalStyles = createGlobalStyle`
-    @font-face {
-        font-family: 'Roboto';
-        src: local('Roboto Medium'), url('https://roboto-webfont.googlecode.com/files/Roboto-Medium-webfont.woff') format('woff');
-        font-weight: ${theme.typography.fontWeight.bold};
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Roboto';
-        src: local('Roboto Light'), url('https://roboto-webfont.googlecode.com/files/Roboto-Light-webfont.woff') format('woff');
-        font-weight: ${theme.typography.fontWeight.default};
-        font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Sacramento';
-      src: local('Sacramento'), url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-      font-weight: 400;
-      font-style: normal;
-    }
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Sacramento&display=swap');
   
     body {
         background: ${theme.colours.white};
@@ -58,6 +39,42 @@ export const GlobalStyles = createGlobalStyle`
 
     h3 {
       font-size: ${theme.typography.fontSize.h3};
+    }
+    
+    a {
+      color: ${theme.colours.CTA};
+      transition: ${theme.decorations.transition};
+      
+      &:hover,
+      &:focus {
+        color: ${theme.colours.highlight};
+        cursor: pointer;
+      }
+    }
+
+    button {
+      background: transparent;
+      border-color: ${theme.colours.CTA};
+      color: ${theme.colours.CTA};
+      cursor: pointer;
+      font-family: ${theme.typography.fontFamily};
+      font-weight: ${theme.typography.fontWeight.default};
+      transition: ${theme.decorations.transition};
+      
+      path {
+        transition: ${theme.decorations.transition};
+      }
+
+      &:hover,
+      &:focus {
+        background: ${theme.colours.CTAHover};
+        border-color: ${theme.colours.CTAHover};
+        color: ${theme.colours.white};
+        
+        path {
+          color: ${theme.colours.white};
+        }
+      }
     }
 `;
 
