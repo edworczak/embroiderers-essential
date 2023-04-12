@@ -9,10 +9,10 @@ export const typography = {
 	fontFamily: "'Raleway', sans-serif",
 	fontFamilyHeader: "'Sacramento', cursive",
 	fontSize: {
-		default: "14px",
-		h1: "2.5em",
-		h2: "2.3em",
-		h3: "2em",
+		default: "16px",
+		h1: "2.2em",
+		h2: "2em",
+		h3: "1.8em",
 	},
 	fontWeight: {
 		default: 300,

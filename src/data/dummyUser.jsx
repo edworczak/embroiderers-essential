@@ -28,7 +28,7 @@ const dummyUser = {
 		},
 		prj0004: {
 			id: "prj0004",
-			name: "Dom Muminków",
+			name: "To jest mój Dom Muminków",
 			startDate: "10.01.2023",
 			time: "24:31",
 			img: new URL("../assets/img/demo/prj0004.jpeg", import.meta.url),
@@ -42,6 +42,7 @@ const dummyUser = {
 		prj0006: {
 			id: "prj0006",
 			name: "Krowa w górach",
+			time: "0:00",
 		},
 	},
 	shoppingList: {

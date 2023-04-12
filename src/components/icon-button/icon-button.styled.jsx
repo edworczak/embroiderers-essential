@@ -6,10 +6,10 @@ export const IconButtonStyled = styled.button`
 	align-items: center;
 	background: transparent;
 	border: ${(props) =>
-		props.$border ? `1px solid ${theme.colours.CTA}` : "none"};
+		props.$border ? `2px solid ${theme.colours.CTA}` : "none"};
 	color: ${theme.typography.colours.link};
 	display: flex;
-	font-size: 1.1em;
+	font-size: ${theme.typography.fontSize.default};
 	height: 50px;
 	justify-content: center;
 	padding: 14px;
@@ -20,6 +20,17 @@ export const IconButtonStyled = styled.button`
 		css`
 			border-radius: 25px;
 			padding: 14px ${theme.sizes.spacings.default};
+
+			&:hover,
+			&:focus {
+				background: ${theme.colours.CTAHover};
+				border-color: ${theme.colours.CTAHover};
+				color: ${theme.colours.white};
+
+				path {
+					color: ${theme.colours.white};
+				}
+			}
 		`}
 
 	span {

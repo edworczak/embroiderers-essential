@@ -4,8 +4,6 @@ import styled from "styled-components";
 import { theme } from "./shared-styles/theme.styled";
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Sacramento&display=swap');
-  
     body {
         background: ${theme.colours.white};
       color: ${theme.typography.colours.body};
@@ -20,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     p {
-      margin-bottom: ${theme.sizes.spacings.small};
+      margin: 0 0 ${theme.sizes.spacings.small};
     }
     
     h1, h2, h3 {
@@ -58,7 +56,7 @@ export const GlobalStyles = createGlobalStyle`
       color: ${theme.colours.CTA};
       cursor: pointer;
       font-family: ${theme.typography.fontFamily};
-      font-weight: ${theme.typography.fontWeight.default};
+      font-weight: ${theme.typography.fontWeight.bold};
       transition: ${theme.decorations.transition};
       
       path {
@@ -67,13 +65,7 @@ export const GlobalStyles = createGlobalStyle`
 
       &:hover,
       &:focus {
-        background: ${theme.colours.CTAHover};
-        border-color: ${theme.colours.CTAHover};
-        color: ${theme.colours.white};
-        
-        path {
-          color: ${theme.colours.white};
-        }
+        cursor: pointer;
       }
     }
 `;
