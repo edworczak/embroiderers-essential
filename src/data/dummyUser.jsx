@@ -46,7 +46,13 @@ const dummyUser = {
 		},
 	},
 	shoppingList: {
-		items: 12,
+		items: {
+			item0: "DMC3866",
+			item1: "DMC3760",
+			item2: "DMC3765",
+			item3: "DMC791",
+			item4: "DMC939",
+		},
 	},
 };
 

@@ -5,10 +5,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import dummyUser from "../../data/dummyUser";
 import pl from "../../data/pl";
 import { theme } from "../../shared-styles/theme.styled";
+import { SelectorShoppingListItemsCount } from "../shopping-list/slice/shopping-list-items-count";
 import {
 	IconWrapper,
 	Info,
@@ -18,7 +20,7 @@ import {
 
 const Welcome = () => {
 	// demo values
-	const shoppingCount = 12;
+	const shoppingCount = useSelector(SelectorShoppingListItemsCount);
 	const openProjectsCount = 4;
 	const finishedProjectsCount = 10;
 	const [openProjectsText, setOpenProjectsText] = useState();

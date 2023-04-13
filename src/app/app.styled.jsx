@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
-import { theme } from "./shared-styles/theme.styled";
+import { theme } from "../shared-styles/theme.styled";
 
 export const GlobalStyles = createGlobalStyle`
     body {

@@ -1,5 +1,6 @@
-import { Section } from "../App.styled";
+import { Section } from "../app/app.styled";
 import ProjectsList from "../components/projects-list/projects-list";
+import ShoppingList from "../components/shopping-list/shipping-list";
 import Welcome from "../components/welcome/welcome";
 import pl from "../data/pl";
 
@@ -15,6 +16,7 @@ const Homepage = () => {
 			</Section>
 			<Section>
 				<h2>{pl.shoppingList}</h2>
+				<ShoppingList />
 			</Section>
 		</div>
 	);
