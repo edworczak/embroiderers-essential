@@ -5,4 +5,5 @@
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "useTabs": true,
+  "printWidth": 120
 }

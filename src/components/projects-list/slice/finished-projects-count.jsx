@@ -12,6 +12,5 @@ export const finishedProjectsCountSlice = createSlice({
 	},
 });
 
-export const { updateFinishedProjectsCount } =
-	finishedProjectsCountSlice.actions;
+export const { updateFinishedProjectsCount } = finishedProjectsCountSlice.actions;
 export default finishedProjectsCountSlice.reducer;

@@ -1,24 +1,29 @@
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 import dummyUser from "../../data/dummyUser";
-import { openProjectsCounterListener } from "../../events";
 import ListScrollX from "../list-scroll-x/list-scroll-x";
 import ProjectButton from "../project-button/project-button";
+import { updateFinishedProjectsCount } from "./slice/finished-projects-count";
+import { updateOpenProjectsCount } from "./slice/open-projects-count";
 
 const ProjectsList = () => {
+	const dispatch = useDispatch();
 	const projects = Object.values(dummyUser.projects);
-	let openProjectsCounter = 0;
+	let openProjects = 0;
+	let finishedProjects = 0;
 
 	projects.forEach((project) => {
 		if (project.finishDate) {
-			openProjectsCounter++;
+			finishedProjects++;
+		} else {
+			openProjects++;
 		}
 	});
 
 	useEffect(() => {
-		openProjectsCounterListener.dispatch("counting", {
-			openProjectsCount: openProjectsCounter,
-		});
+		dispatch(updateOpenProjectsCount(openProjects));
+		dispatch(updateFinishedProjectsCount(finishedProjects));
 	}, []);
 
 	return (

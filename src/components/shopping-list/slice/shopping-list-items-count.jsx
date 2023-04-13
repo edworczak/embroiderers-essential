@@ -12,9 +12,5 @@ export const shoppingListItemsCountSlice = createSlice({
 	},
 });
 
-export const { updateShoppingListItemsCount } =
-	shoppingListItemsCountSlice.actions;
+export const { updateShoppingListItemsCount } = shoppingListItemsCountSlice.actions;
 export default shoppingListItemsCountSlice.reducer;
-export const SelectorShoppingListItemsCount = (state) =>
-	state.shoppingListItemsCount.value;
-console.log(SelectorShoppingListItemsCount);

@@ -4,8 +4,7 @@ import { theme } from "../../shared-styles/theme.styled";
 
 export const IconButtonStyled = styled.button`
 	background: transparent;
-	border: ${(props) =>
-		props.$border ? `2px solid ${theme.colours.CTA}` : "none"};
+	border: ${(props) => (props.$border ? `2px solid ${theme.colours.CTA}` : "none")};
 	color: ${theme.typography.colours.link};
 	display: flex;
 	font-size: ${theme.typography.fontSize.default};

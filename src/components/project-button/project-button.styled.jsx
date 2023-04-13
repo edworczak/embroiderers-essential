@@ -20,8 +20,7 @@ export const ProjectButtonStyled = styled.div`
 `;
 
 export const ProjectImage = styled.a`
-	background: ${(props) =>
-		`url(${props.$projectImage})` || theme.colours.kashmir};
+	background: ${(props) => `url(${props.$projectImage})` || theme.colours.kashmir};
 	background-position: center;
 	background-size: cover;
 	flex-shrink: 0;

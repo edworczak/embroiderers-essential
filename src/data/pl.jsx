@@ -28,7 +28,7 @@ const pl = {
 			textAfter: {
 				items0: "haftów",
 				items1: "haft",
-				items: "hafty",
+				items2: "hafty",
 			},
 		},
 		shoppingWelcome: {

@@ -1,5 +1,6 @@
-import { ListScrollWrapper, ListWrapper } from "./list-scroll-x.styled";
 import PropTypes from "prop-types";
+
+import { ListScrollWrapper, ListWrapper } from "./list-scroll-x.styled";
 
 const ListScrollX = ({ children }) => {
 	return (

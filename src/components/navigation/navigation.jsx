@@ -37,16 +37,10 @@ const Navigation = (props) => {
 
 	return (
 		<>
-			<ScreenOverlay
-				$expanded={expanded}
-				$opening={opening}
-				$closing={closing}
-			/>
+			<ScreenOverlay $expanded={expanded} $opening={opening} $closing={closing} />
 			<NavigationWrapper $expanded={expanded}>
 				<div>
-					{!homepage && (
-						<IconButton icon={faArrowLeft} text={pl.navigation.back} />
-					)}
+					{!homepage && <IconButton icon={faArrowLeft} text={pl.navigation.back} />}
 					{!homepage && <IconButton icon={faHouse} text={pl.navigation.home} />}
 					<IconButton icon={faUser} text={pl.navigation.profile} />
 					<IconButton icon={faGears} text={pl.navigation.settings} />
@@ -54,11 +48,7 @@ const Navigation = (props) => {
 				</div>
 				<div>
 					<IconButton icon={faSearch} text={pl.navigation.search} />
-					<IconButton
-						onClick={handleMenuClick}
-						icon={expanded ? faXmark : faBars}
-						text={pl.navigation.close}
-					/>
+					<IconButton onClick={handleMenuClick} icon={expanded ? faXmark : faBars} text={pl.navigation.close} />
 				</div>
 			</NavigationWrapper>
 		</>

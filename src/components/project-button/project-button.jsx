@@ -1,8 +1,4 @@
-import {
-	faClockRotateLeft,
-	faHourglassHalf,
-	faPencil,
-} from "@fortawesome/free-solid-svg-icons";
+import { faClockRotateLeft, faHourglassHalf, faPencil } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 
@@ -19,9 +15,7 @@ import {
 } from "./project-button.styled";
 
 const ProjectButton = ({ project }) => {
-	const projectImage = project.img
-		? project.img
-		: new URL("../../assets/img/empty-project.jpeg", import.meta.url);
+	const projectImage = project.img ? project.img : new URL("../../assets/img/empty-project.jpeg", import.meta.url);
 
 	return (
 		<ProjectButtonStyled>
@@ -31,19 +25,11 @@ const ProjectButton = ({ project }) => {
 				<ProjectTitleWrapper>
 					<ProjectTitle>{project.name}</ProjectTitle>
 					<Timer>
-						<FontAwesomeIcon
-							icon={faHourglassHalf}
-							color={theme.colours.dark}
-						/>{" "}
-						{project.time}
+						<FontAwesomeIcon icon={faHourglassHalf} color={theme.colours.dark} /> {project.time}
 					</Timer>
 				</ProjectTitleWrapper>
 				<ActionWrapper>
-					<IconButton
-						icon={faClockRotateLeft}
-						text={"zacznij sesję"}
-						border={true}
-					/>
+					<IconButton icon={faClockRotateLeft} text={"zacznij sesję"} border={true} />
 				</ActionWrapper>
 			</ProjectInfoWrapper>
 		</ProjectButtonStyled>
