@@ -2,18 +2,16 @@ import { useEffect } from "react";
 
 import dummyUser from "../../data/dummyUser";
 import { openProjectsCounterListener } from "../../events";
+import ListScrollX from "../list-scroll-x/list-scroll-x";
 import ProjectButton from "../project-button/project-button";
-import { ProjectListScroll, ProjectsListWrapper } from "./projects-list.styled";
 
 const ProjectsList = () => {
 	const projects = Object.values(dummyUser.projects);
-	let openProjects = [];
 	let openProjectsCounter = 0;
 
 	projects.forEach((project) => {
 		if (project.finishDate) {
 			openProjectsCounter++;
-			openProjects.push(project);
 		}
 	});
 
@@ -24,15 +22,13 @@ const ProjectsList = () => {
 	}, []);
 
 	return (
-		<ProjectListScroll>
-			<ProjectsListWrapper>
-				{projects.map((project) => {
-					if (!project.finishDate) {
-						return <ProjectButton key={project.id} project={project} />;
-					}
-				})}
-			</ProjectsListWrapper>
-		</ProjectListScroll>
+		<ListScrollX>
+			{projects.map((project) => {
+				if (!project.finishDate) {
+					return <ProjectButton key={project.id} project={project} />;
+				}
+			})}
+		</ListScrollX>
 	);
 };
 
