@@ -23,7 +23,7 @@ const pl = {
 				items2: "otwarte projekty",
 			},
 		},
-		allProjectsWelcome: {
+		finishedProjectsWelcome: {
 			textBefore: "udało Ci się ukończyć",
 			textAfter: {
 				items0: "haftów",
@@ -33,14 +33,17 @@ const pl = {
 		},
 		shoppingWelcome: {
 			textBefore: "na Twojej liście zakupów",
-			textAfter: {
+			verbs: {
 				verbSingle: "jest",
 				verbMultiple: "są",
 				verbNull: "nie ma żadnych",
+			},
+			textAfter: {
 				items0: "produktów",
 				items1: "produkt",
 				items2: "produkty",
 			},
+			shoppingTime: "może czas na zakupy",
 		},
 		openProjectsText: "masz",
 		shoppingListText: "na Twojej liście zakupów",
