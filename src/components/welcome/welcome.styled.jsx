@@ -6,9 +6,22 @@ export const InfoWrapper = styled.div`
 	padding: 0;
 `;
 
-export const Info = styled.p`
+export const Info = styled.div`
+	display: flex;
 	line-height: 32px;
 	margin: 0 0 ${theme.sizes.spacings.small};
+
+	svg {
+		margin-right: ${theme.sizes.spacings.small};
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+`;
+
+export const IconWrapper = styled.div`
+	height: 100%;
 `;
 
 export const NumberHighLight = styled.span`

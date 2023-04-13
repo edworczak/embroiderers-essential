@@ -1,8 +1,20 @@
+import {
+	faBagShopping,
+	faCircleCheck,
+	faCircleHalfStroke,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
 import dummyUser from "../../data/dummyUser";
 import pl from "../../data/pl";
-import { Info, InfoWrapper, NumberHighLight } from "./welcome.styled";
+import { theme } from "../../shared-styles/theme.styled";
+import {
+	IconWrapper,
+	Info,
+	InfoWrapper,
+	NumberHighLight,
+} from "./welcome.styled";
 
 const Welcome = () => {
 	// demo values
@@ -72,15 +84,44 @@ const Welcome = () => {
 			</h1>
 			<InfoWrapper>
 				<Info>
-					{pl.home.openProjectsWelcome.textBefore}{" "}
-					<NumberHighLight>
-						{openProjectsCount < 10 ? openProjectsCount : "10+"}
-					</NumberHighLight>{" "}
-					{openProjectsText}, {pl.home.allProjectsWelcome.textBefore}{" "}
-					<NumberHighLight>{finishedProjectsCount}</NumberHighLight>{" "}
-					{finishedProjectsText}, {pl.home.shoppingWelcome.textBefore}{" "}
-					{shippingVerb} <NumberHighLight>{shoppingCount}</NumberHighLight>{" "}
-					{shippingText}
+					<IconWrapper>
+						<FontAwesomeIcon
+							icon={faCircleHalfStroke}
+							color={theme.colours.highlight}
+						/>
+					</IconWrapper>
+					<p>
+						{pl.home.openProjectsWelcome.textBefore}{" "}
+						<NumberHighLight>
+							{openProjectsCount < 10 ? openProjectsCount : "10+"}
+						</NumberHighLight>{" "}
+						{openProjectsText}
+					</p>
+				</Info>
+				<Info>
+					<IconWrapper>
+						<FontAwesomeIcon
+							icon={faCircleCheck}
+							color={theme.colours.highlight}
+						/>
+					</IconWrapper>
+					<p>
+						{pl.home.allProjectsWelcome.textBefore}{" "}
+						<NumberHighLight>{finishedProjectsCount}</NumberHighLight>{" "}
+						{finishedProjectsText}
+					</p>
+				</Info>
+				<Info>
+					<IconWrapper>
+						<FontAwesomeIcon
+							icon={faBagShopping}
+							color={theme.colours.highlight}
+						/>
+					</IconWrapper>
+					<p>
+						{pl.home.shoppingWelcome.textBefore} {shippingVerb}{" "}
+						<NumberHighLight>{shoppingCount}</NumberHighLight> {shippingText}
+					</p>
 				</Info>
 			</InfoWrapper>
 		</div>

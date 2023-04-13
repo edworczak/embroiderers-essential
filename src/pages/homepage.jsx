@@ -13,6 +13,9 @@ const Homepage = () => {
 				<h2>{pl.openProjects}</h2>
 				<ProjectsList />
 			</Section>
+			<Section>
+				<h2>{pl.shoppingList}</h2>
+			</Section>
 		</div>
 	);
 };
