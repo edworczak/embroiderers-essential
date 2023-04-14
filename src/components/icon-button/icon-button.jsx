@@ -2,17 +2,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 
 import { theme } from "../../shared-styles/theme.styled";
-import { IconButtonStyled } from "./icon-button.styled";
+import { IconButtonStyled, IconLinkStyled } from "./icon-button.styled";
 
 const IconButton = (props) => {
 	const { icon, colour, text, border, onClick, width, margin } = props;
 
-	return (
-		<IconButtonStyled $border={border} $text={!!text} $width={width} $margin={margin} onClick={onClick}>
-			<span>{text}</span>
-			<FontAwesomeIcon icon={icon} color={colour || theme.colours.CTA} />
-		</IconButtonStyled>
-	);
+	if (typeof onClick === "function") {
+		return (
+			<IconButtonStyled $border={border} $text={!!text} $width={width} $margin={margin} onClick={onClick}>
+				<span>{text}</span>
+				<FontAwesomeIcon icon={icon} color={colour || theme.colours.CTA} />
+			</IconButtonStyled>
+		);
+	} else {
+		return (
+			<IconLinkStyled to={onClick} $border={border} $text={!!text} $width={width} $margin={margin}>
+				<span>{text}</span>
+				<FontAwesomeIcon icon={icon} color={colour || theme.colours.CTA} />
+			</IconLinkStyled>
+		);
+	}
 };
 
 IconButton.propTypes = {
@@ -20,7 +29,7 @@ IconButton.propTypes = {
 	colour: PropTypes.string,
 	text: PropTypes.string,
 	border: PropTypes.bool,
-	onClick: PropTypes.func,
+	onClick: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 	width: PropTypes.string,
 	margin: PropTypes.string,
 };

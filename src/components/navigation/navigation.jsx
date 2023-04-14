@@ -14,6 +14,7 @@ import { useState } from "react";
 import pl from "../../data/pl";
 import IconButton from "../icon-button/icon-button";
 import { NavigationWrapper, ScreenOverlay } from "./navigation.styled";
+import {Link} from "react-router-dom";
 
 const Navigation = (props) => {
 	const { homepage } = props;
@@ -35,13 +36,14 @@ const Navigation = (props) => {
 		setExpanded(!expanded);
 	};
 
+
 	return (
 		<>
 			<ScreenOverlay $expanded={expanded} $opening={opening} $closing={closing} />
 			<NavigationWrapper $expanded={expanded}>
 				<div>
-					{!homepage && <IconButton icon={faArrowLeft} text={pl.navigation.back} />}
-					{!homepage && <IconButton icon={faHouse} text={pl.navigation.home} />}
+					{!homepage && <IconButton icon={faArrowLeft} text={pl.navigation.back} onClick={`/`} />}
+					{!homepage && <IconButton icon={faHouse} text={pl.navigation.home} onClick={`/home`}/>}
 					<IconButton icon={faUser} text={pl.navigation.profile} />
 					<IconButton icon={faGears} text={pl.navigation.settings} />
 					<IconButton icon={faQuestion} text={pl.navigation.help} />

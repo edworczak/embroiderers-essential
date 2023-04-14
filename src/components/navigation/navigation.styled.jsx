@@ -27,7 +27,7 @@ export const NavigationWrapper = styled.nav`
 	width: ${(props) => (props.$expanded ? "200px" : theme.sizes.spacings.navWidth)};
 	z-index: 2;
 
-	button {
+	button, a {
 		width: ${(props) => (props.$expanded ? "100%" : "50px")};
 
 		span {
