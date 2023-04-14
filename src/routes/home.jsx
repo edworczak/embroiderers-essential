@@ -13,7 +13,7 @@ const Home = () => {
 				<Welcome />
 			</Section>
 			<Section>
-				<h2>{pl.openProjects}</h2>
+				<h2>{pl.projects.openProjects}</h2>
 				<ProjectsList />
 			</Section>
 			<Section>
@@ -25,8 +25,9 @@ const Home = () => {
 						text={pl.tools.shoppingList}
 						width={"100%"}
 						margin={"0 0 8px"}
+						onClick={`shoppinglist`}
 					/>
-					<IconButton icon={faPalette} border={true} text={pl.tools.palettes} width={"100%"} margin={"0 0 8px"} />
+					<IconButton icon={faPalette} border={true} text={pl.tools.palettes} width={"100%"} margin={"0 0 8px"} onClick={`palettes`} />
 					<IconButton
 						onClick={`projects`}
 						icon={faPenRuler}
@@ -35,8 +36,8 @@ const Home = () => {
 						width={"100%"}
 						margin={"0 0 8px"}
 					/>
-					<IconButton icon={faBoxOpen} border={true} text={pl.tools.threads} width={"100%"} margin={"0 0 8px"} />
-					<IconButton icon={faBrush} border={true} text={pl.tools.substitutes} width={"100%"} margin={"0 0 8px"} />
+					<IconButton icon={faBoxOpen} border={true} text={pl.tools.threads} width={"100%"} margin={"0 0 8px"} onClick={`threads`} />
+					<IconButton icon={faBrush} border={true} text={pl.tools.substitutes} width={"100%"} margin={"0 0 8px"} onClick={`substitutes`} />
 				</div>
 			</Section>
 		</>

@@ -6,14 +6,15 @@ const ProjectsPage = () => {
 	return (
 		<>
 			<Section>
-				<h1>twoje projekty</h1>
+				<h1>{pl.projects.title}</h1>
+				<p>{pl.projects.null}</p>
 			</Section>
 			<Section>
-				<h2>{pl.openProjects}</h2>
+				<h2>{pl.projects.openProjects}</h2>
 				<ProjectsList />
 			</Section>
 			<Section>
-				<h2>{pl.tools.tools}</h2>
+				<h2>{pl.projects.finishedProjects}</h2>
 				<ProjectsList />
 			</Section>
 		</>

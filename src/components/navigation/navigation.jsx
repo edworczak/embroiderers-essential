@@ -44,14 +44,14 @@ const Navigation = () => {
 			<ScreenOverlay $expanded={expanded} $opening={opening} $closing={closing} />
 			<NavigationWrapper $expanded={expanded} data-current={location.pathname}>
 				<div>
-					{!homepage && <IconButton icon={faArrowLeft} text={pl.navigation.back} onClick={() => history.goBack()} />}
+					{!homepage && <IconButton icon={faArrowLeft} text={pl.navigation.back} onClick={`/`} />}
 					{!homepage && <IconButton icon={faHouse} text={pl.navigation.home} onClick={`/`} />}
-					<IconButton icon={faUser} text={pl.navigation.profile} />
-					<IconButton icon={faGears} text={pl.navigation.settings} />
-					<IconButton icon={faQuestion} text={pl.navigation.help} />
+					<IconButton icon={faUser} text={pl.navigation.profile} onClick={`profile`} />
+					<IconButton icon={faGears} text={pl.navigation.settings} onClick={`settings`} />
+					<IconButton icon={faQuestion} text={pl.navigation.help} onClick={`help`} />
 				</div>
 				<div>
-					<IconButton icon={faSearch} text={pl.navigation.search} />
+					<IconButton icon={faSearch} text={pl.navigation.search} onClick={`search`} />
 					<IconButton
 						onClick={handleMenuClick}
 						icon={expanded ? faXmark : faBars}

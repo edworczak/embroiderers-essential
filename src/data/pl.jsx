@@ -4,6 +4,11 @@ const pl = {
 		name: "Zamienniki Kolorów Mulin",
 		search: "Wyszukaj",
 	},
+	action: {
+		save: 'zapisz',
+		delete: 'usuń',
+		cancel: 'anuluj',
+	},
 	navigation: {
 		home: "home",
 		settings: "ustawienia",
@@ -58,8 +63,42 @@ const pl = {
 			tools: "narzędzia",
 		},
 	},
-	openProjects: "otwarte projekty",
-	shoppingList: "lista zakupów",
+	projects: {
+		title: "twoje projekty",
+		null: "nie masz żadnych projektów",
+		openProjects: "otwarte projekty",
+		finishedProjects: "ukończone projekty",
+        add: "nowy projekt",
+	},
+	palettes: {
+		title: "twoje palety",
+		null: "nie masz jeszcze żadnych palet"
+	},
+	shoppingList: {
+		title: "lista zakupów",
+		null: "wszystko jest w zapasie",
+	},
+	substitutes: {
+		title: "zamienniki kolorów mulin",
+		null: "jeszcze nic tu nie ma",
+	},
+	threads: {
+		title: "lista kolorów mulin",
+		null: "jeszcze nic tu nie ma",
+	},
+	search: {
+		title: "szukaj",
+	},
+	settings: {
+		title: "ustawienia",
+	},
+	profile: {
+		title: "profil",
+		name: "imię",
+	},
+	help: {
+		title: "pomoc",
+	},
 };
 
 export default pl;
