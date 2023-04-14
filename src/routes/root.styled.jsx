@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {theme} from "../shared-styles/theme.styled";
+
+import { theme } from "../shared-styles/theme.styled";
 
 export const AppWrapper = styled.div`
 	display: flex;

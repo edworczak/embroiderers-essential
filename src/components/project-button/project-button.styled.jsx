@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
+import { IconButtonWrapper } from "../icon-button/icon-button.styled";
 
 export const ProjectButtonStyled = styled.div`
 	background: ${theme.colours.kashmir};
@@ -12,7 +13,7 @@ export const ProjectButtonStyled = styled.div`
 	position: relative;
 	width: auto;
 
-	> button {
+	> ${IconButtonWrapper} {
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -58,11 +59,5 @@ export const Timer = styled.p`
 
 	svg {
 		margin-right: ${theme.sizes.spacings.small};
-	}
-`;
-
-export const ActionWrapper = styled.div`
-	button {
-		width: auto;
 	}
 `;

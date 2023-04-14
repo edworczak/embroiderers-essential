@@ -9,7 +9,7 @@ const InfoParagraph = (props) => {
 
 	const getTextDeclination = () => {
 		if (textsAfter) {
-			switch(number) {
+			switch (number) {
 				case 1:
 					return textsAfter.items1;
 				case 2:
@@ -20,13 +20,13 @@ const InfoParagraph = (props) => {
 					return textsAfter.items0;
 			}
 		}
-	}
+	};
 
 	const textAfter = getTextDeclination();
 
 	const getVerbDeclination = () => {
 		if (verbs) {
-			switch(number) {
+			switch (number) {
 				case 0:
 					return verbs.verbNull;
 				case 2:
@@ -37,7 +37,7 @@ const InfoParagraph = (props) => {
 					return verbs.verbSingle;
 			}
 		}
-	}
+	};
 
 	const verb = getVerbDeclination();
 

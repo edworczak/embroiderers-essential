@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { theme } from "../../shared-styles/theme.styled";
 import IconButton from "../icon-button/icon-button";
 import {
-	ActionWrapper,
 	ProjectButtonStyled,
 	ProjectImage,
 	ProjectInfoWrapper,
@@ -28,9 +27,9 @@ const ProjectButton = ({ project }) => {
 						<FontAwesomeIcon icon={faHourglassHalf} color={theme.colours.dark} /> {project.time}
 					</Timer>
 				</ProjectTitleWrapper>
-				<ActionWrapper>
+				<div>
 					<IconButton icon={faClockRotateLeft} text={"zacznij sesję"} border={true} />
-				</ActionWrapper>
+				</div>
 			</ProjectInfoWrapper>
 		</ProjectButtonStyled>
 	);

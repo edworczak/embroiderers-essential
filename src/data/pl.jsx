@@ -19,6 +19,7 @@ const pl = {
 		palettes: "palety",
 		substitutes: "zamienniki kolorów",
 		projects: "projekty",
+		threads: "twoje muliny",
 	},
 	home: {
 		welcome: "cześć,",

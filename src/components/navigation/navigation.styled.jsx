@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
+import { IconButtonWrapper } from "../icon-button/icon-button.styled";
 
 export const ScreenOverlay = styled.div`
 	background-color: ${(props) => (props.$expanded ? "rgb(0, 105, 137, 0.2)" : "rgb(0, 105, 137, 0)")};
@@ -27,8 +28,9 @@ export const NavigationWrapper = styled.nav`
 	width: ${(props) => (props.$expanded ? "200px" : theme.sizes.spacings.navWidth)};
 	z-index: 2;
 
-	button, a {
-		width: ${(props) => (props.$expanded ? "100%" : "50px")};
+	${IconButtonWrapper} {
+		transition: width ${theme.decorations.animationTime} ease-in-out;
+		width: ${(props) => (props.$expanded && !props.$opening ? "100%" : "50px")};
 
 		span {
 			line-height: 22px;
