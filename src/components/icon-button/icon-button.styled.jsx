@@ -9,9 +9,10 @@ export const IconButtonStyled = styled.button`
 	display: flex;
 	font-size: ${theme.typography.fontSize.default};
 	height: 50px;
-	justify-content: right;
+	justify-content: ${(props) => (props.$width ? "space-between" : "center")};
+	${(props) => (props.$margin ? `margin: ${props.$margin}` : "")};
 	padding: 14px;
-	width: ${(props) => (props.$text ? "auto" : "50px")};
+	width: ${(props) => (props.$width ? props.$width : "auto")};
 
 	${(props) =>
 		props.$border &&

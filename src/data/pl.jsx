@@ -13,6 +13,13 @@ const pl = {
 		help: "pomoc",
 		close: "zamknij",
 	},
+	tools: {
+		tools: "narzędzia",
+		shoppingList: "lista zakupów",
+		palettes: "palety",
+		substitutes: "zamienniki kolorów",
+		projects: "projekty",
+	},
 	home: {
 		welcome: "cześć,",
 		openProjectsWelcome: {
@@ -45,11 +52,10 @@ const pl = {
 			},
 			shoppingTime: "może czas na zakupy",
 		},
-		openProjectsText: "masz",
-		shoppingListText: "na Twojej liście zakupów",
-		shoppingListText0: "na Twojej liście zakupów nie ma żadnych produktów",
-		shoppingListText1: "jest 1 produkt",
-		shoppingListText2: "jest 1 produkt",
+		sectionTitle: {
+			openProjects: "otwarte projekty",
+			tools: "narzędzia",
+		},
 	},
 	openProjects: "otwarte projekty",
 	shoppingList: "lista zakupów",
