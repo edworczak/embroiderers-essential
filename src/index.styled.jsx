@@ -4,7 +4,7 @@ import { theme } from "./shared-styles/theme.styled";
 
 export const GlobalStyles = createGlobalStyle`
     body {
-        background: ${theme.colours.white};
+        background: ${theme.colours.kashmir};
       color: ${theme.typography.colours.body};
         font-family: ${theme.typography.fontFamily};
         font-size: ${theme.typography.fontSize.default};
@@ -19,11 +19,15 @@ export const GlobalStyles = createGlobalStyle`
     p {
       margin: 0 0 ${theme.sizes.spacings.small};
     }
-    
+
     h1, h2, h3 {
-      font-family: ${theme.typography.fontFamilyHeader};
-      font-weight: ${theme.typography.fontWeight.header};
-      margin: 0 0 ${theme.sizes.spacings.small};
+        font-family: ${theme.typography.fontFamilyCursive};
+        font-weight: ${theme.typography.fontWeight.header};
+        margin: 0 0 ${theme.sizes.spacings.small};
+    }
+    
+    h1, h2 {
+      font-family: ${theme.typography.fontFamilyCursive};
     }
     
     h1 {

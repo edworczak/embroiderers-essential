@@ -10,9 +10,7 @@ export const ProjectListScroll = styled.div`
 
 export const ProjectsListWrapper = styled.div`
 	display: flex;
+	flex-wrap: wrap;
+	gap: ${theme.sizes.spacings.default};
 	justify-content: flex-start;
-	flex-wrap: nowrap;
-	overflow-x: auto;
-	padding: 0 ${theme.sizes.spacings.default};
-	width: auto;
 `;

@@ -2,38 +2,38 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import dummyUser from "../../data/dummyUser";
-import ListScrollX from "../list-scroll-x/list-scroll-x";
 import ProjectButton from "../project-button/project-button";
+import { ProjectsListWrapper } from "./projects-list.styled";
 import { updateFinishedProjectsCount } from "./slice/finished-projects-count";
 import { updateOpenProjectsCount } from "./slice/open-projects-count";
 
 const ProjectsList = () => {
 	const dispatch = useDispatch();
 	const projects = Object.values(dummyUser.projects);
-	let openProjects = 0;
-	let finishedProjects = 0;
+	let openProjectsCount = 0;
+	let finishedProjectsCount = 0;
 
 	projects.forEach((project) => {
 		if (project.finishDate) {
-			finishedProjects++;
+			finishedProjectsCount++;
 		} else {
-			openProjects++;
+			openProjectsCount++;
 		}
 	});
 
 	useEffect(() => {
-		dispatch(updateOpenProjectsCount(openProjects));
-		dispatch(updateFinishedProjectsCount(finishedProjects));
+		dispatch(updateOpenProjectsCount(openProjectsCount));
+		dispatch(updateFinishedProjectsCount(finishedProjectsCount));
 	}, []);
 
 	return (
-		<ListScrollX>
+		<ProjectsListWrapper>
 			{projects.map((project) => {
-				if (!project.finishDate) {
+				if (project.startDate) {
 					return <ProjectButton key={project.id} project={project} />;
 				}
 			})}
-		</ListScrollX>
+		</ProjectsListWrapper>
 	);
 };
 

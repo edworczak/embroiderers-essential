@@ -42,6 +42,7 @@ const dummyUser = {
 		prj0006: {
 			id: "prj0006",
 			name: "Krowa w górach",
+			startDate: "31.01.2024",
 			time: "0:00",
 		},
 	},

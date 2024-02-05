@@ -1,23 +1,14 @@
 import styled from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
-import { IconButtonWrapper } from "../icon-button/icon-button.styled";
 
 export const ProjectButtonStyled = styled.div`
-	background: ${theme.colours.kashmir};
-	border-radius: ${theme.decorations.borderRadiusDefault};
-	display: flex;
-	flex-shrink: 0;
-	margin: 0 ${theme.sizes.spacings.default};
+	background: white;
+	flex-grow: 1;
 	overflow: hidden;
+	padding: ${theme.sizes.spacings.default};
 	position: relative;
 	width: auto;
-
-	> ${IconButtonWrapper} {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
 `;
 
 export const ProjectImage = styled.a`
@@ -34,15 +25,12 @@ export const ProjectInfoWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	max-width: 250px;
-	padding: ${theme.sizes.spacings.default};
 `;
 
 export const ProjectTitleWrapper = styled.a`
+	display: block;
 	flex-grow: 1;
-	margin-right: 50px;
-	padding-bottom: ${theme.sizes.spacings.default};
-	width: calc(100% - 34px);
+	margin-bottom: 24px;
 `;
 
 export const ProjectTitle = styled.h3`
@@ -53,11 +41,22 @@ export const ProjectTitle = styled.h3`
 	white-space: nowrap;
 `;
 
-export const Timer = styled.p`
+export const ProjectDates = styled.p`
 	color: ${theme.colours.dark};
 	margin-bottom: ${theme.sizes.spacings.small};
+	display: flex;
+	gap: 24px;
 
-	svg {
-		margin-right: ${theme.sizes.spacings.small};
+	span {
+		position: relative;
+	}
+
+	span:nth-child(n + 2)::before {
+		background: black;
+		content: "";
+		height: 16px;
+		left: -11px;
+		position: absolute;
+		width: 1px;
 	}
 `;

@@ -9,16 +9,18 @@ export const IconButtonWrapper = styled.div`
 
 	a,
 	button {
-		background: transparent;
-		border: ${(props) => (props.$border ? `1px solid ${theme.colours.CTA}` : "none")};
-		${(props) => (props.$border || !props.$text ? "border-radius: 50vh" : "")};
+		background: white;
+		border: 1px solid ${theme.colours.CTA};
+		border-radius: 50vh;
 		color: ${theme.typography.colours.link};
 		display: flex;
 		font-size: ${theme.typography.fontSize.default};
-		font-weight: ${theme.typography.fontWeight.bold};
-		height: 50px;
+		font-weight: ${theme.typography.fontWeight.default};
+		gap: ${theme.sizes.spacings.small};
 		justify-content: ${(props) => (props.$width ? "space-between" : "center")};
-		padding: ${(props) => (props.$border ? `14px ${theme.sizes.spacings.default}` : "14px")};
+		min-height: 40px;
+		min-width: 40px;
+		padding: ${theme.sizes.spacings.small} ${theme.sizes.spacings.default};
 		position: relative;
 		width: ${(props) => (props.$width ? props.$width : "auto")};
 		text-decoration: none;
@@ -29,19 +31,21 @@ export const IconButtonWrapper = styled.div`
 			position: absolute;
 			background: #fff;
 			z-index: -1;
-			transition: 500ms;
+			transition: 300ms;
 			content: "";
 			height: calc(100% + 2px);
-			width: calc(50% - 10px);
+			width: calc(50% - 8px);
 			top: -1px;
 		}
 
 		&::before {
-			left: -1px;
+			border-radius: 50vh 0 0 50vh;
+			left: -2px;
 		}
 
 		&::after {
-			right: -1px;
+			border-radius: 0 50vh 50vh 0;
+			right: -2px;
 		}
 
 		&:hover,
@@ -57,13 +61,12 @@ export const IconButtonWrapper = styled.div`
 		}
 
 		span {
-			padding-left: ${theme.sizes.spacings.default};
 			white-space: nowrap;
 		}
 
 		svg {
-			height: 100%;
-			width: 22px;
+			height: 18px;
+			width: 18px;
 		}
 	}
 `;
