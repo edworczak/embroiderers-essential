@@ -8,14 +8,16 @@ const ProjectsList = (props) => {
 	const { isOpenProjects = false, isFinishedProjects = false } = props;
 	const projects = Object.values(dummyUser.projects);
 
+	if (!projects.length) return;
+
 	return (
 		<ProjectsListWrapper>
 			{projects.map((project) => {
-				if (
-					(!isOpenProjects && !isFinishedProjects) ||
-					(isOpenProjects && !project.finishDate) ||
-					(isFinishedProjects && !project.finishDate)
-				) {
+				if (!isOpenProjects && !isFinishedProjects) {
+					return <ProjectButton key={project.id} project={project} />;
+				} else if (isOpenProjects && !project.finishDate) {
+					return <ProjectButton key={project.id} project={project} />;
+				} else if (isFinishedProjects && project.finishDate) {
 					return <ProjectButton key={project.id} project={project} />;
 				}
 			})}

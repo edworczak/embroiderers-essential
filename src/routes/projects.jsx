@@ -1,22 +1,22 @@
-import { Section } from "../app/app.styled";
+import { Row } from "../app/app.styled";
 import ProjectsList from "../components/projects-list/projects-list";
 import pl from "../data/pl";
 
 const ProjectsPage = () => {
 	return (
 		<>
-			<Section>
+			<Row>
 				<h1>{pl.projects.title}</h1>
 				<p>{pl.projects.null}</p>
-			</Section>
-			<Section>
+			</Row>
+			<Row>
 				<h2>{pl.projects.openProjects}</h2>
 				<ProjectsList isOpenProjects={true} />
-			</Section>
-			<Section>
+			</Row>
+			<Row>
 				<h2>{pl.projects.finishedProjects}</h2>
 				<ProjectsList isFinishedProjects={true} />
-			</Section>
+			</Row>
 		</>
 	);
 };

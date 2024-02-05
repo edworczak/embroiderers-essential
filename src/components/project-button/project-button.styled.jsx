@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
 
-export const ProjectButtonStyled = styled.div`
+export const ProjectButtonStyled = styled.a`
 	background: white;
 	flex-grow: 1;
 	overflow: hidden;
@@ -11,7 +11,7 @@ export const ProjectButtonStyled = styled.div`
 	width: auto;
 `;
 
-export const ProjectImage = styled.a`
+export const ProjectImage = styled.div`
 	background: ${(props) => `url(${props.$projectImage})` || theme.colours.kashmir};
 	background-position: center;
 	background-size: cover;
@@ -27,10 +27,15 @@ export const ProjectInfoWrapper = styled.div`
 	justify-content: space-between;
 `;
 
-export const ProjectTitleWrapper = styled.a`
-	display: block;
-	flex-grow: 1;
-	margin-bottom: 24px;
+export const ProjectCTAWrapper = styled.div`
+	display: flex;
+	justify-content: flex-end;
+`;
+
+export const ProjectTitleWrapper = styled.div`
+	display: flex;
+	gap: ${theme.sizes.spacings.big};
+	justify-content: space-between;
 `;
 
 export const ProjectTitle = styled.h3`
@@ -43,7 +48,7 @@ export const ProjectTitle = styled.h3`
 
 export const ProjectDates = styled.p`
 	color: ${theme.colours.dark};
-	margin-bottom: ${theme.sizes.spacings.small};
+	margin-bottom: ${theme.sizes.spacings.big};
 	display: flex;
 	gap: 24px;
 
