@@ -12,8 +12,8 @@ const IconButton = (props) => {
 		return (
 			<IconButtonWrapper $width={width} $margin={margin} $border={border} $text={!!text}>
 				<button onClick={onClick}>
-					{text && <span>{text}</span>}
 					<FontAwesomeIcon icon={icon} color={colour || theme.colours.CTA} />
+					{text && <span>{text}</span>}
 				</button>
 			</IconButtonWrapper>
 		);
@@ -21,8 +21,8 @@ const IconButton = (props) => {
 		return (
 			<IconButtonWrapper $width={width} $margin={margin} $border={border} $text={!!text}>
 				<Link to={onClick}>
-					{text && <span>{text}</span>}
 					<FontAwesomeIcon icon={icon} color={colour || theme.colours.CTA} />
+					{text && <span>{text}</span>}
 				</Link>
 			</IconButtonWrapper>
 		);

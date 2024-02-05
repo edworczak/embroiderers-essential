@@ -5,9 +5,9 @@ const pl = {
 		search: "Wyszukaj",
 	},
 	action: {
-		save: 'zapisz',
-		delete: 'usuń',
-		cancel: 'anuluj',
+		save: "zapisz",
+		delete: "usuń",
+		cancel: "anuluj",
 	},
 	navigation: {
 		home: "home",
@@ -68,11 +68,11 @@ const pl = {
 		null: "nie masz żadnych projektów",
 		openProjects: "otwarte projekty",
 		finishedProjects: "ukończone projekty",
-        add: "nowy projekt",
+		add: "nowy projekt",
 	},
 	palettes: {
 		title: "twoje palety",
-		null: "nie masz jeszcze żadnych palet"
+		null: "nie masz jeszcze żadnych palet",
 	},
 	shoppingList: {
 		title: "lista zakupów",

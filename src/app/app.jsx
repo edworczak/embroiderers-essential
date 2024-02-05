@@ -1,17 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 
 import Error from "../routes/error";
+import HelpPage from "../routes/help";
 import Home from "../routes/home";
 import Layout from "../routes/layout";
-import ProjectsPage from "../routes/projects";
 import PalettesPage from "../routes/palettes";
-import ThreadsPage from "../routes/threads";
-import ShoppingListPage from "../routes/shopping-list";
-import SubstitutesPage from "../routes/substitutes";
-import HelpPage from "../routes/help";
+import ProfilePage from "../routes/profile";
+import ProjectsPage from "../routes/projects";
 import SearchPage from "../routes/search";
 import SettingsPage from "../routes/settings";
-import ProfilePage from "../routes/profile";
+import ShoppingListPage from "../routes/shopping-list";
+import SubstitutesPage from "../routes/substitutes";
+import ThreadsPage from "../routes/threads";
 
 const App = () => {
 	return (
