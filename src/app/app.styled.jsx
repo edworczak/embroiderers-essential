@@ -7,7 +7,6 @@ export const AppWrapper = styled.div`
 `;
 
 export const Content = styled.div`
-	padding: ${theme.sizes.spacings.big};
 	width: 100%;
 `;
 
@@ -16,15 +15,14 @@ export const Section = styled.section`
 	width: 100%;
 `;
 
-export const Column = styled.section`
+export const Column = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 `;
 
-export const Row = styled.section`
-	display: flex;
-	flex-direction: row;
-	gap: ${theme.sizes.spacings.big};
+export const Row = styled.div`
+	background: ${(props) => (props.$background ? props.$background : "transparent")};
+	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
 	width: 100%;
 `;

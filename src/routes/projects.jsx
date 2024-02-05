@@ -11,11 +11,11 @@ const ProjectsPage = () => {
 			</Section>
 			<Section>
 				<h2>{pl.projects.openProjects}</h2>
-				<ProjectsList />
+				<ProjectsList isOpenProjects={true} />
 			</Section>
 			<Section>
 				<h2>{pl.projects.finishedProjects}</h2>
-				<ProjectsList />
+				<ProjectsList isFinishedProjects={true} />
 			</Section>
 		</>
 	);

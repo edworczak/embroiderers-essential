@@ -4,7 +4,7 @@ import { theme } from "../../shared-styles/theme.styled";
 
 export const IconButtonWrapper = styled.div`
 	display: inline-block;
-	${(props) => (props.$margin ? `padding: ${props.$margin}` : "")};
+	${(props) => (props.$margin ? `margin: ${props.$margin}` : "")};
 	width: ${(props) => (props.$width ? props.$width : "auto")};
 
 	a,
