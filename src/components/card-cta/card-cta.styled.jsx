@@ -14,12 +14,12 @@ export const CardCTAWrapper = styled.div`
 	&:hover {
 		box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 	}
-`;
 
-export const CardAnchorContent = styled.a`
-	display: block;
-	padding: ${theme.sizes.spacings.default};
-	position: relative;
+	> a {
+		display: block;
+		padding: ${theme.sizes.spacings.default};
+		position: relative;
+	}
 `;
 
 export const CardItemCTAsWrapper = styled.div`

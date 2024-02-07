@@ -35,7 +35,7 @@ const Colour = ({ colour }) => {
 				},
 			]}
 		>
-			<ColourSwatch $background={colour.rgb} />
+			<ColourSwatch style={{ background: colour.rgb }} />
 			<ColourInfo>
 				<ColourName>
 					{colour.brand}

@@ -7,6 +7,7 @@ import Layout from "../routes/layout";
 import PalettesPage from "../routes/palettes";
 import ProfilePage from "../routes/profile";
 import ProjectsPage from "../routes/projects";
+import ProjectPage from "../routes/projects/project";
 import SearchPage from "../routes/search";
 import SettingsPage from "../routes/settings";
 import ShoppingListPage from "../routes/shopping-list";
@@ -19,6 +20,7 @@ const App = () => {
 			<Route path="/" element={<Layout />}>
 				<Route index element={<Home />} />
 				<Route path="projects" element={<ProjectsPage />} />
+				<Route path="projects/project" element={<ProjectPage />} />
 				<Route path="palettes" element={<PalettesPage />} />
 				<Route path="threads" element={<ThreadsPage />} />
 				<Route path="shoppinglist" element={<ShoppingListPage />} />

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { theme } from "../../shared-styles/theme.styled";
 
 export const ColourSwatch = styled.div`
-	background-color: ${(props) => (props.$background ? props.$background : "transparent")};
 	border-left: 4px solid ${theme.colours.kashmir};
 	border-right: 4px solid ${theme.colours.kashmir};
 	bottom: 0;

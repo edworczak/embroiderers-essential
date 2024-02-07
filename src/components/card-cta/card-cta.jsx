@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import IconButton from "../icon-button/icon-button";
-import { CardAnchorContent, CardCTAWrapper, CardItemCTAsWrapper } from "./card-cta.styled";
+import { CardCTAWrapper, CardItemCTAsWrapper } from "./card-cta.styled";
 
-const CardCTA = ({ children, CTAs }) => {
+const CardCTA = ({ children, url, CTAs }) => {
 	return (
 		<CardCTAWrapper>
-			<CardAnchorContent>{children}</CardAnchorContent>
+			<Link to={url}>{children}</Link>
 			{CTAs.length && (
 				<CardItemCTAsWrapper>
 					{CTAs.map((CTA) => {
@@ -20,6 +21,7 @@ const CardCTA = ({ children, CTAs }) => {
 
 CardCTA.propTypes = {
 	children: PropTypes.node,
+	url: PropTypes.string,
 	CTAs: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
 };
 

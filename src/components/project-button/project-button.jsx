@@ -7,6 +7,7 @@ import { ProjectDates, ProjectTitle, ProjectTitleWrapper } from "./project-butto
 const ProjectButton = ({ project }) => {
 	return (
 		<CardCTA
+			url={`/projects/project?id=${project.id}`}
 			CTAs={
 				!project.finishDate && [
 					{
