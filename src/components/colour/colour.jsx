@@ -5,7 +5,30 @@ import brandNames from "../../data/brandNames";
 import CardCTA from "../card-cta/card-cta";
 import { ColourInfo, ColourName, ColourSubstitute, ColourSwatch } from "./colour.styled";
 
-const Colour = ({ colour }) => {
+const Colour = ({ colour, noCTAs, smallColourCard }) => {
+	const addToCollectionCTA = {
+		keyName: "addToCollection",
+		icon: faBoxesStacked,
+		text: "do zapasów",
+		iconOnly: true,
+	};
+
+	const addToCartCTA = {
+		keyName: "addToCart",
+		icon: faCartShopping,
+		text: "dodaj do listy zakupów",
+		iconOnly: true,
+	};
+
+	const getCTAs = () => {
+		if (noCTAs) return;
+
+		const CTAs = [];
+		if (!smallColourCard) CTAs.push(addToCollectionCTA);
+		CTAs.push(addToCartCTA);
+		return CTAs;
+	};
+
 	const substituteLine = (brand, substitute) => {
 		return (
 			substitute && (
@@ -18,39 +41,29 @@ const Colour = ({ colour }) => {
 	};
 
 	return (
-		<CardCTA
-			contentInRow={true}
-			CTAs={[
-				{
-					keyName: "addToCollection",
-					icon: faBoxesStacked,
-					text: "do zapasów",
-					iconOnly: true,
-				},
-				{
-					keyName: "addToCart",
-					icon: faCartShopping,
-					text: "dodaj do listy zakupów",
-					iconOnly: true,
-				},
-			]}
-		>
+		<CardCTA smallColourCard={smallColourCard} contentInRow={true} CTAs={getCTAs()}>
 			<ColourSwatch style={{ background: colour.rgb }} />
 			<ColourInfo>
 				<ColourName>
 					{colour.brand}
 					<h3>{colour.name}</h3>
 				</ColourName>
-				{brandNames.map((brand) => {
-					return substituteLine(brand, colour[brand.code]);
-				})}
+				{!smallColourCard && (
+					<div>
+						{brandNames.map((brand) => {
+							return substituteLine(brand, colour[brand.code]);
+						})}
+					</div>
+				)}
 			</ColourInfo>
 		</CardCTA>
 	);
 };
 
 Colour.propTypes = {
-	colour: PropTypes.object,
+	colour: PropTypes.object.isRequired,
+	noCTAs: PropTypes.bool,
+	smallColourCard: PropTypes.bool,
 };
 
 export default Colour;

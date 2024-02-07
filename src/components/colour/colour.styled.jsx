@@ -13,13 +13,14 @@ export const ColourSwatch = styled.div`
 
 export const ColourInfo = styled.div`
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: ${theme.sizes.spacings.big};
 	padding-left: 46px;
 	width: 100%;
 `;
 
 export const ColourName = styled.div`
-	margin-bottom: ${theme.sizes.spacings.big};
-
 	h3 {
 		display: inline-block;
 		margin: 0 0 0 ${theme.sizes.spacings.default};

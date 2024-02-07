@@ -1,6 +1,7 @@
 const dummyUser = {
 	user: {
 		name: "Ewa",
+		language: "pl",
 	},
 	projects: [
 		{
@@ -9,6 +10,56 @@ const dummyUser = {
 			startDate: "12.03.2023",
 			time: "10:28",
 			img: new URL("../assets/img/demo/prj0001.jpeg", import.meta.url),
+			threads: [
+				{
+					id: "dmc987",
+					group: "Koniczyna",
+				},
+				{
+					id: "dmc988",
+					group: "Koniczyna",
+				},
+				{
+					id: "dmc3052",
+					group: "Największy kwiat",
+				},
+				{
+					id: "dmc948",
+					group: "Największy kwiat",
+				},
+				{
+					id: "dmc472",
+					group: "Fioletowe kwiatki",
+				},
+				{
+					id: "dmc24",
+					group: "Fioletowe kwiatki",
+				},
+				{
+					id: "dmc472",
+					group: "Lawenda",
+				},
+				{
+					id: "dmc3042",
+					group: "Lawenda",
+				},
+				{
+					id: "dmc368",
+					group: "Mały kwiatek",
+				},
+				{
+					id: "dmc165",
+					group: "Mały kwiatek",
+				},
+				{
+					id: "dmc905",
+					group: "Trawa",
+				},
+				{
+					id: "dmc3364",
+					group: "Trawa",
+				},
+			],
 		},
 		{
 			id: "prj0002",
@@ -46,15 +97,6 @@ const dummyUser = {
 			time: "0:00",
 		},
 	],
-	shoppingList: {
-		items: {
-			item0: "DMC3866",
-			item1: "DMC3760",
-			item2: "DMC3765",
-			item3: "DMC791",
-			item4: "DMC939",
-		},
-	},
 };
 
 export default dummyUser;
