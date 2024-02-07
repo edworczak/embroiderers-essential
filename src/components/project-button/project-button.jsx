@@ -5,7 +5,8 @@ import IconButton from "../icon-button/icon-button";
 import {
 	ProjectButtonWrapper,
 	ProjectCTAWrapper,
-	ProjectDates, ProjectInfoWrapper,
+	ProjectDates,
+	ProjectInfoWrapper,
 	ProjectTitle,
 	ProjectTitleWrapper,
 } from "./project-button.styled";
@@ -23,9 +24,11 @@ const ProjectButton = ({ project }) => {
 					{project.finishDate && <span>{project.finishDate}</span>}
 				</ProjectDates>
 			</ProjectInfoWrapper>
-			{!project.finishDate && <ProjectCTAWrapper>
-				<IconButton icon={faClockRotateLeft} text={"zacznij sesję"} border={true} />
-			</ProjectCTAWrapper>}
+			{!project.finishDate && (
+				<ProjectCTAWrapper>
+					<IconButton icon={faClockRotateLeft} text={"zacznij sesję"} border={true} />
+				</ProjectCTAWrapper>
+			)}
 		</ProjectButtonWrapper>
 	);
 };
