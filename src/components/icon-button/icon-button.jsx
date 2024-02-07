@@ -6,11 +6,11 @@ import { theme } from "../../shared-styles/theme.styled";
 import { IconButtonWrapper } from "./icon-button.styled";
 
 const IconButton = (props) => {
-	const { icon, colour, text, border, onClick, width, margin } = props;
+	const { icon, colour, text, border, onClick, width, margin, iconOnly } = props;
 
 	if (typeof onClick === "function") {
 		return (
-			<IconButtonWrapper $width={width} $margin={margin} $border={border} $text={!!text}>
+			<IconButtonWrapper $width={width} $margin={margin} $border={border} $text={!!text} $iconOnly={iconOnly}>
 				<button onClick={onClick}>
 					<FontAwesomeIcon icon={icon} color={colour || theme.colours.CTA} />
 					{text && <span>{text}</span>}
@@ -19,7 +19,7 @@ const IconButton = (props) => {
 		);
 	} else {
 		return (
-			<IconButtonWrapper $width={width} $margin={margin} $border={border} $text={!!text}>
+			<IconButtonWrapper $width={width} $margin={margin} $border={border} $text={!!text} $iconOnly={iconOnly}>
 				<Link to={onClick}>
 					<FontAwesomeIcon icon={icon} color={colour || theme.colours.CTA} />
 					{text && <span>{text}</span>}
@@ -37,6 +37,7 @@ IconButton.propTypes = {
 	onClick: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 	width: PropTypes.string,
 	margin: PropTypes.string,
+	iconOnly: PropTypes.bool,
 };
 
 export default IconButton;

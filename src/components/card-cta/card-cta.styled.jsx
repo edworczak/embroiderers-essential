@@ -4,7 +4,7 @@ import { theme } from "../../shared-styles/theme.styled";
 
 export const CardCTAWrapper = styled.div`
 	background: white;
-	flex-grow: 1;
+	flex: 1 1 0;
 	min-width: 260px;
 	overflow: hidden;
 	position: relative;
@@ -17,8 +17,7 @@ export const CardCTAWrapper = styled.div`
 `;
 
 export const CardAnchorContent = styled.a`
-	display: flex;
-	justify-content: space-between;
+	display: block;
 	padding: ${theme.sizes.spacings.default};
 	position: relative;
 `;
@@ -26,6 +25,7 @@ export const CardAnchorContent = styled.a`
 export const CardItemCTAsWrapper = styled.div`
 	border-top: 1px solid ${theme.colours.kashmir};
 	display: flex;
+	gap: ${theme.sizes.spacings.default};
 	justify-content: flex-end;
 	padding: ${theme.sizes.spacings.default};
 `;

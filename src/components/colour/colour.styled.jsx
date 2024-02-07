@@ -19,9 +19,11 @@ export const ColourInfo = styled.div`
 `;
 
 export const ColourName = styled.div`
+	margin-bottom: ${theme.sizes.spacings.big};
+
 	h3 {
 		display: inline-block;
-		margin-left: ${theme.sizes.spacings.default};
+		margin: 0 0 0 ${theme.sizes.spacings.default};
 	}
 `;
 
@@ -32,4 +34,8 @@ export const ColourSubstitute = styled.div`
 	display: flex;
 	gap: ${theme.sizes.spacings.default};
 	justify-content: space-between;
+
+	&:not(:first-child) {
+		margin-top: ${theme.sizes.spacings.small};
+	}
 `;

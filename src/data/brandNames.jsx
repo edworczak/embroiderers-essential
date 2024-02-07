@@ -1,24 +1,16 @@
-const brandNames = {
-	full: {
-		dmc: "DMC",
-		anchor: "Anchor",
-		ariadna: "Ariadna",
+const brandNames = [
+	{
+		name: "DMC",
+		code: "dmc",
 	},
-	lowerCase: {
-		dmc: "dmc",
-		anchor: "anchor",
-		ariadna: "ariadna",
+	{
+		name: "Anchor",
+		code: "anchor",
 	},
-	upperCase: {
-		dmc: "DMC",
-		anchor: "ANCHOR",
-		ariadna: "ARIADNA",
+	{
+		name: "Ariadna",
+		code: "ariadna",
 	},
-	short: {
-		dmc: "DMC",
-		anchor: "An.",
-		ariadna: "Ad.",
-	},
-};
+];
 
 export default brandNames;

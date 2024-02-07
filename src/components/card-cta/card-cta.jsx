@@ -7,10 +7,10 @@ const CardCTA = ({ children, CTAs }) => {
 	return (
 		<CardCTAWrapper>
 			<CardAnchorContent>{children}</CardAnchorContent>
-			{CTAs && (
+			{CTAs.length && (
 				<CardItemCTAsWrapper>
 					{CTAs.map((CTA) => {
-						return <IconButton key={CTA.keyName} icon={CTA.icon} text={CTA.text} />;
+						return <IconButton key={CTA.keyName} icon={CTA.icon} text={CTA.text} iconOnly={CTA.iconOnly} />;
 					})}
 				</CardItemCTAsWrapper>
 			)}
@@ -20,7 +20,7 @@ const CardCTA = ({ children, CTAs }) => {
 
 CardCTA.propTypes = {
 	children: PropTypes.node,
-	CTAs: PropTypes.array,
+	CTAs: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
 };
 
 export default CardCTA;

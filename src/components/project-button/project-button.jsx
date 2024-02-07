@@ -7,13 +7,15 @@ import { ProjectDates, ProjectTitle, ProjectTitleWrapper } from "./project-butto
 const ProjectButton = ({ project }) => {
 	return (
 		<CardCTA
-			CTAs={[
-				{
-					keyName: "startSession",
-					icon: faClockRotateLeft,
-					text: "zacznij sesję",
-				},
-			]}
+			CTAs={
+				!project.finishDate && [
+					{
+						keyName: "startSession",
+						icon: faClockRotateLeft,
+						text: "zacznij sesję",
+					},
+				]
+			}
 		>
 			<ProjectTitleWrapper>
 				<ProjectTitle>{project.name}</ProjectTitle>
