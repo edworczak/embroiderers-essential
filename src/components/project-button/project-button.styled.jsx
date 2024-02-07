@@ -2,34 +2,32 @@ import styled from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
 
-export const ProjectButtonStyled = styled.a`
+export const ProjectButtonWrapper = styled.div`
 	background: white;
 	flex-grow: 1;
+		min-width: 260px;
 	overflow: hidden;
-	padding: ${theme.sizes.spacings.default};
 	position: relative;
+    transition: 300ms;
 	width: auto;
+		
+		&:hover {
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+		}
 `;
 
-export const ProjectImage = styled.div`
-	background: ${(props) => `url(${props.$projectImage})` || theme.colours.kashmir};
-	background-position: center;
-	background-size: cover;
-	flex-shrink: 0;
-	height: 100%;
-	position: relative;
-	width: 50px;
-`;
-
-export const ProjectInfoWrapper = styled.div`
+export const ProjectInfoWrapper = styled.a`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+    padding: ${theme.sizes.spacings.default};
 `;
 
 export const ProjectCTAWrapper = styled.div`
+		border-top: 1px solid ${theme.colours.kashmir};
 	display: flex;
 	justify-content: flex-end;
+  padding: ${theme.sizes.spacings.default};
 `;
 
 export const ProjectTitleWrapper = styled.div`
@@ -48,7 +46,6 @@ export const ProjectTitle = styled.h3`
 
 export const ProjectDates = styled.p`
 	color: ${theme.colours.dark};
-	margin-bottom: ${theme.sizes.spacings.big};
 	display: flex;
 	gap: 24px;
 

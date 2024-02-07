@@ -22,7 +22,12 @@ export const Column = styled.div`
 `;
 
 export const Row = styled.div`
+    ${(props) => (props.$border ? `border-bottom: 1px solid ${props.$border}` : "")};
+    ${(props) => (props.$align ? `align-items: ${props.$align}` : "")};
 	background: ${(props) => (props.$background ? props.$background : "transparent")};
+    display: ${(props) => (props.$useFlex ? "flex" : "block")};
+    flex-direction: ${(props) => (props.$column ? "column" : "row")};
+    ${(props) => (props.$justify ? `justify-content: ${props.$justify}` : "")};
 	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
 	width: 100%;
 `;
