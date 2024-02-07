@@ -18,9 +18,9 @@ export const CardCTAWrapper = styled.div`
 
 export const CardAnchorContent = styled.a`
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 	padding: ${theme.sizes.spacings.default};
+	position: relative;
 `;
 
 export const CardItemCTAsWrapper = styled.div`

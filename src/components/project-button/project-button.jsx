@@ -2,18 +2,14 @@ import { faClockRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 
 import CardCTA from "../card-cta/card-cta";
-import {
-	ProjectDates,
-	ProjectTitle,
-	ProjectTitleWrapper,
-} from "./project-button.styled";
+import { ProjectDates, ProjectTitle, ProjectTitleWrapper } from "./project-button.styled";
 
 const ProjectButton = ({ project }) => {
 	return (
 		<CardCTA
 			CTAs={[
 				{
-					key: "startSession",
+					keyName: "startSession",
 					icon: faClockRotateLeft,
 					text: "zacznij sesję",
 				},

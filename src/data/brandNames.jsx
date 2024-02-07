@@ -4,7 +4,7 @@ const brandNames = {
 		anchor: "Anchor",
 		ariadna: "Ariadna",
 	},
-	codeName: {
+	lowerCase: {
 		dmc: "dmc",
 		anchor: "anchor",
 		ariadna: "ariadna",

@@ -10,7 +10,7 @@ const CardCTA = ({ children, CTAs }) => {
 			{CTAs && (
 				<CardItemCTAsWrapper>
 					{CTAs.map((CTA) => {
-						return <IconButton key={CTA.key} icon={CTA.icon} text={CTA.text} />;
+						return <IconButton key={CTA.keyName} icon={CTA.icon} text={CTA.text} />;
 					})}
 				</CardItemCTAsWrapper>
 			)}
