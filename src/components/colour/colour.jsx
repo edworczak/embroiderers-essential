@@ -1,59 +1,53 @@
-import { faBoxesStacked, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faBoxesStacked, faCartShopping, faPencil, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
+import { createCTAprops } from "../../app/common";
 
 import brandNames from "../../data/brandNames";
+import colours from "../../data/colours";
 import CardCTA from "../card-cta/card-cta";
-import { ColourInfo, ColourName, ColourSubstitute, ColourSwatch } from "./colour.styled";
+import TableBody from "../common/table/table-body";
+import TableRow from "../common/table/table-row";
+import { ColourInfo, ColourName, ColourSwatch } from "./colour.styled";
 
-const Colour = ({ colour, noCTAs, smallColourCard }) => {
-	const addToCollectionCTA = {
-		keyName: "addToCollection",
-		icon: faBoxesStacked,
-		text: "do zapasów",
-		iconOnly: true,
-	};
+const Colour = ({ colourID, noCTAs, verticalCardLayout, description, collectionCTA, cartCTA, editCTA, deleteCTA, smallButtons = false, showSubstitutes = false }) => {
+	const colour = colours.filter((colour) => {
+		return colour.id === colourID;
+	})[0];
 
-	const addToCartCTA = {
-		keyName: "addToCart",
-		icon: faCartShopping,
-		text: "dodaj do listy zakupów",
-		iconOnly: true,
-	};
+	const addToCollectionCTAProps = createCTAprops("addToCollection", faBoxesStacked, "do zapasów", smallButtons);
+	const addToCartCTAProps = createCTAprops("addToCart", faCartShopping, "dodaj do listy zakupów", smallButtons);
+	const editCTAProps = createCTAprops("edit", faPencil, "edytuj", smallButtons);
+	const deleteCTAProps = createCTAprops("delete", faTrashCan, "usuń", smallButtons);
 
 	const getCTAs = () => {
 		if (noCTAs) return;
 
 		const CTAs = [];
-		if (!smallColourCard) CTAs.push(addToCollectionCTA);
-		CTAs.push(addToCartCTA);
+		if (deleteCTA) CTAs.push(deleteCTAProps);
+		if (editCTA) CTAs.push(editCTAProps);
+		if (cartCTA) CTAs.push(addToCartCTAProps);
+		if (collectionCTA) CTAs.push(addToCollectionCTAProps);
 		return CTAs;
 	};
 
 	const substituteLine = (brand, substitute) => {
-		return (
-			substitute && (
-				<ColourSubstitute key={brand.code}>
-					<span>{brand.name}:</span>
-					<span>{substitute[0].replace(brand.code, "")}</span>
-				</ColourSubstitute>
-			)
-		);
+		return substitute && <TableRow label={brand.name} text={substitute[0].replace(brand.code, "")} key={brand.code} />;
 	};
 
 	return (
-		<CardCTA smallColourCard={smallColourCard} contentInRow={true} CTAs={getCTAs()}>
+		<CardCTA verticalCardLayout={verticalCardLayout} contentInRow={true} CTAs={getCTAs()}>
 			<ColourSwatch style={{ background: colour.rgb }} />
 			<ColourInfo>
 				<ColourName>
-					{colour.brand}
-					<h3>{colour.name}</h3>
+					<span>{colour.brand}</span> {colour.name}
 				</ColourName>
-				{!smallColourCard && (
-					<div>
+				{description && <p>{description}</p>}
+				{showSubstitutes && (
+					<TableBody>
 						{brandNames.map((brand) => {
 							return substituteLine(brand, colour[brand.code]);
 						})}
-					</div>
+					</TableBody>
 				)}
 			</ColourInfo>
 		</CardCTA>
@@ -61,9 +55,16 @@ const Colour = ({ colour, noCTAs, smallColourCard }) => {
 };
 
 Colour.propTypes = {
-	colour: PropTypes.object.isRequired,
+	colourID: PropTypes.string.isRequired,
 	noCTAs: PropTypes.bool,
-	smallColourCard: PropTypes.bool,
+	verticalCardLayout: PropTypes.bool,
+	description: PropTypes.string,
+	collectionCTA: PropTypes.bool,
+	cartCTA: PropTypes.bool,
+	editCTA: PropTypes.bool,
+	deleteCTA: PropTypes.bool,
+	smallButtons: PropTypes.bool,
+	showSubstitutes: PropTypes.bool,
 };
 
 export default Colour;

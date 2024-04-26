@@ -14,16 +14,6 @@ const Home = () => {
 				<h1>embroidery essential</h1>
 			</Row>
 			<Row $background={"white"}>
-				<h2>{pl.tools.tools}</h2>
-				<List column={false} centerItems={true} scroll={true}>
-					<IconButton icon={faBagShopping} border={true} text={pl.tools.shoppingList} onClick={`shoppinglist`} />
-					<IconButton icon={faPalette} border={true} text={pl.tools.palettes} onClick={`palettes`} />
-					<IconButton onClick={`projects`} icon={faPenRuler} border={true} text={pl.tools.projects} />
-					<IconButton icon={faBoxOpen} border={true} text={pl.tools.threads} onClick={`threads`} />
-					<IconButton icon={faBrush} border={true} text={pl.tools.substitutes} onClick={`substitutes`} />
-				</List>
-			</Row>
-			<Row>
 				<Welcome />
 			</Row>
 			<Row>

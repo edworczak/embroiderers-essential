@@ -17,13 +17,13 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     p {
-      margin: 0 0 ${theme.sizes.spacings.small};
+      margin: 0 0 0;
     }
 
     h1, h2, h3 {
         font-family: ${theme.typography.fontFamilyCursive};
         font-weight: ${theme.typography.fontWeight.header};
-        margin: 0 0 ${theme.sizes.spacings.small};
+        margin: 0 0 0;
     }
     
     h1, h2 {
@@ -43,19 +43,20 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     a {
-      color: ${theme.colours.CTA};
+      color: ${theme.typography.colours.body};
       transition: ${theme.decorations.transition};
+				text-decoration: none;
       
       &:hover,
       &:focus {
-        color: ${theme.colours.highlight};
+        color: ${theme.typography.colours.body};
         cursor: pointer;
       }
     }
 
     button {
       background: transparent;
-      border-color: ${theme.colours.CTA};
+      border-color: ${theme.typography.colours.link};
       color: ${theme.colours.CTA};
       cursor: pointer;
       font-family: ${theme.typography.fontFamily};
@@ -68,6 +69,7 @@ export const GlobalStyles = createGlobalStyle`
 
       &:hover,
       &:focus {
+					color: ${theme.typography.colours.linkHover};
         cursor: pointer;
       }
     }

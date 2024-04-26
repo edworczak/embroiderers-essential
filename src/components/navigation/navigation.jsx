@@ -1,19 +1,33 @@
-import { faArrowLeft, faHouse, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
-
-import pl from "../../data/pl";
-import IconButton from "../icon-button/icon-button";
-import { NavigationWrapper } from "./navigation.styled";
+import navigationLinks from "../../data/navigationLinks";
+import { theme } from "../../shared-styles/theme.styled";
+import { NavigationBackHomeWrapper, NavigationLink, NavigationWrapper } from "./navigation.styled";
 
 const Navigation = () => {
 	const homepage = useLocation().pathname === `/`;
+	const currentLocation = useLocation().pathname;
+
+	const createLinks = (links) => {
+		return links.map((link) => {
+			return (
+				<NavigationLink to={link.link} key={link.id} $active={link.link === currentLocation}>
+					{link.icon && (<FontAwesomeIcon icon={link.icon} color={theme.colours.white} />)}
+					{link.label}
+				</NavigationLink>
+			);
+		})
+	};
 
 	return (
 		<NavigationWrapper data-current={location.pathname}>
-			<IconButton icon={faSearch} text={pl.navigation.search} onClick={`search`} />
-			{!homepage && <IconButton icon={faHouse} text={pl.navigation.home} onClick={`/`} />}
-			{!homepage && <IconButton icon={faArrowLeft} text={pl.navigation.back} onClick={`/`} />}
+			{createLinks(navigationLinks.tools)}
+				{!homepage && (
+					<NavigationBackHomeWrapper>
+						{createLinks(navigationLinks.historyNav)}
+					</NavigationBackHomeWrapper>
+				)}
 		</NavigationWrapper>
 	);
 };

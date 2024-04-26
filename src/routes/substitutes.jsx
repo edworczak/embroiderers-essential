@@ -11,9 +11,18 @@ const SubstitutesPage = () => {
 				<h1>{pl.substitutes.title}</h1>
 			</Row>
 			<Row>
-				<List $wrap={true}>
+				<List numberOfColumns={4}>
 					{colours.map((colour) => {
-						return <Colour colour={colour} key={colour.id} />;
+						return (
+							<Colour
+								colourID={colour.id}
+								key={`substitutes-list-item-${colour.id}`}
+								collectionCTA={true}
+								cartCTA={true}
+								smallButtons={true}
+								showSubstitutes={true}
+							/>
+						);
 					})}
 				</List>
 			</Row>

@@ -10,15 +10,15 @@ export const IconButtonWrapper = styled.div`
 	a,
 	button {
 		align-items: center;
-		background: white;
-		border: 1px solid ${theme.colours.CTA};
+		background: transparent;
+		//border: 1px solid ${theme.colours.CTA};
 		border-radius: 50vh;
 		box-sizing: border-box;
 		color: ${theme.typography.colours.link};
 		display: flex;
 		font-size: ${theme.typography.fontSize.default};
 		font-weight: ${theme.typography.fontWeight.default};
-		gap: ${(props) => (props.$iconOnly ? 0 : theme.sizes.spacings.small)};
+		gap: ${(props) => (props.$iconOnly ? 0 : theme.sizes.spacings.default)};
 		justify-content: ${(props) => (props.$width ? "space-between" : "center")};
 		min-height: 40px;
 		min-width: 40px;
@@ -27,16 +27,39 @@ export const IconButtonWrapper = styled.div`
 		position: relative;
 		width: ${(props) => (props.$width ? props.$width : "auto")};
 		text-decoration: none;
+		transition: color 300ms ease-in-out;
 		z-index: 0;
+
+		&::after {
+			background-color: ${theme.colours.CTA};
+			border-radius: 50vh;
+			content: "";
+			height: 0;
+			position: absolute;
+			transition: all 300ms ease-out;
+			width: 0;
+			z-index: -1;
+		}
 
 		&:hover,
 		&:focus {
 			border-color: ${theme.colours.CTA};
-			color: ${theme.colours.CTA};
+			color: ${theme.colours.white};
 			text-decoration: none;
+
+			&::after {
+				height: 100%;
+				width: 100%;
+			}
+
+			svg {
+				fill: ${theme.colours.white};
+				color: ${theme.colours.white};
+			}
 		}
 
 		span {
+			line-height: 18px;
 			white-space: nowrap;
 
 			${(props) => (props.$iconOnly ? "font-size: 0; line-height: 0" : "")};
@@ -44,6 +67,7 @@ export const IconButtonWrapper = styled.div`
 
 		svg {
 			height: 18px;
+			transition: color 300ms ease-in-out;
 			width: 18px;
 		}
 	}

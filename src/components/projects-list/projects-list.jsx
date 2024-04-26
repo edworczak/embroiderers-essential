@@ -12,13 +12,13 @@ const ProjectsList = (props) => {
 	if (!projects.length) return <p>{pl.projects.null}</p>;
 
 	return (
-		<List>
+		<List numberOfColumns={2}>
 			{projects.map((project) => {
 				if (!isOpenProjects && !isFinishedProjects) {
 					return <ProjectButton key={project.id} project={project} />;
-				} else if (isOpenProjects && !project.finishDate) {
+				} else if (isOpenProjects && !project.finished) {
 					return <ProjectButton key={project.id} project={project} />;
-				} else if (isFinishedProjects && project.finishDate) {
+				} else if (isFinishedProjects && project.finished) {
 					return <ProjectButton key={project.id} project={project} />;
 				}
 			})}
