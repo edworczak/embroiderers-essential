@@ -1,37 +1,19 @@
 import { faClockRotateLeft, faPencil } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 
+import { createCTAprops } from "../../app/common";
 import { theme } from "../../shared-styles/theme.styled";
 import CardCTA from "../card-cta/card-cta";
 import TableBody from "../common/table/table-body";
 import TableRow from "../common/table/table-row";
-import {
-	ProjectDates,
-	ProjectImage,
-	ProjectInfoWrapper,
-	ProjectTitle,
-	ProjectTitleWrapper,
-} from "./project-button.styled";
+import { ProjectImage, ProjectInfoWrapper, ProjectTitle, ProjectTitleWrapper } from "./project-button.styled";
 
 const ProjectButton = ({ project }) => {
+	const editCTAProps = createCTAprops("edit", faPencil, "edytuj");
+	const sessionCTAProps = createCTAprops("startSession", faClockRotateLeft, "zacznij sesję");
+
 	return (
-		<CardCTA
-			url={`/projects/project?id=${project.id}`}
-			CTAs={
-				!project.finished && [
-					{
-						keyName: "edit",
-						icon: faPencil,
-						text: "edytuj projekt",
-					},
-					{
-						keyName: "startSession",
-						icon: faClockRotateLeft,
-						text: "zacznij sesję",
-					},
-				]
-			}
-		>
+		<CardCTA url={`/projects/project?id=${project.id}`} CTAs={!project.finished && [editCTAProps, sessionCTAProps]}>
 			<ProjectImage
 				style={{ backgroundImage: `url(${project.img ? project.img : theme.decorations.defaultImages.project})` }}
 				$defaultImage={!project.img}

@@ -1,10 +1,13 @@
+import { HeadingPrimary, HeadingRow } from "../app/app.styled";
 import pl from "../data/pl";
 
 const SearchPage = () => {
 	return (
-		<div>
-			<h1>{pl.search.title}</h1>
-		</div>
+		<>
+			<HeadingRow>
+				<HeadingPrimary>{pl.search.title}</HeadingPrimary>
+			</HeadingRow>
+		</>
 	);
 };
 

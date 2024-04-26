@@ -1,8 +1,7 @@
 import { useSelector } from "react-redux";
 
+import { CounterItem } from "../../app/app.styled";
 import pl from "../../data/pl";
-import InfoParagraph from "./partials/info-paragraph";
-import { InfoWrapper } from "./welcome.styled";
 
 const Welcome = () => {
 	const shoppingCount = useSelector((state) => state.shoppingListItemsCount.value);
@@ -10,11 +9,20 @@ const Welcome = () => {
 	const finishedProjectsCount = useSelector((state) => state.finishedProjectsCount.value);
 
 	return (
-		<InfoWrapper>
-			<InfoParagraph text={pl.home.openProjectsWelcome} number={openProjectsCount < 10 ? openProjectsCount : "10+"} />
-			<InfoParagraph text={pl.home.finishedProjectsWelcome} number={finishedProjectsCount} />
-			<InfoParagraph text={pl.home.shoppingWelcome} number={shoppingCount} />
-		</InfoWrapper>
+		<>
+			<CounterItem>
+				<span>{pl.shoppingList.title}:</span>
+				<span>{shoppingCount}</span>
+			</CounterItem>
+			<CounterItem>
+				<span>{pl.projects.openProjects}:</span>
+				<span>{openProjectsCount}</span>
+			</CounterItem>
+			<CounterItem>
+				<span>{pl.projects.finishedProjects}:</span>
+				<span>{finishedProjectsCount}</span>
+			</CounterItem>
+		</>
 	);
 };
 

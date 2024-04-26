@@ -1,11 +1,16 @@
+import { HeadingPrimary, HeadingRow, Row } from "../app/app.styled";
 import pl from "../data/pl";
 
 const PalettesPage = () => {
 	return (
-		<div>
-			<h1>{pl.palettes.title}</h1>
-			<p>{pl.palettes.null}</p>
-		</div>
+		<>
+			<HeadingRow>
+				<HeadingPrimary>{pl.palettes.title}</HeadingPrimary>
+			</HeadingRow>
+			<Row>
+				<p>{pl.palettes.null}</p>
+			</Row>
+		</>
 	);
 };
 
