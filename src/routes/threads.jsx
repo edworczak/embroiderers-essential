@@ -1,4 +1,5 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
 import { HeadingPrimary, HeadingRow, Row } from "../app/app.styled";
 import Colour from "../components/colour/colour";
 import IconButton from "../components/icon-button/icon-button";
@@ -30,7 +31,7 @@ const ThreadsPage = () => {
 								/>
 							);
 						})}
-				</List>
+					</List>
 				)}
 			</Row>
 		</>

@@ -4,5 +4,5 @@ export const createCTAprops = (keyName, icon, text, iconOnly) => {
 		icon: icon,
 		text: text,
 		iconOnly: iconOnly,
-	}
+	};
 };

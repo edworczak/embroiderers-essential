@@ -1,4 +1,5 @@
 import { faArrowLeft, faGears, faHouse, faSearch } from "@fortawesome/free-solid-svg-icons";
+
 import pl from "./pl";
 
 const navigationLinks = {

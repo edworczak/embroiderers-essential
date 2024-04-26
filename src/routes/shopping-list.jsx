@@ -21,7 +21,16 @@ const ShoppingListPage = () => {
 				{dummyUser.shoppingList.threads && (
 					<List numberOfColumns={4}>
 						{dummyUser.shoppingList.threads.map((colour) => {
-							return <Colour colourID={colour.id} key={colour.id} editCTA={true} deleteCTA={true} collectionCTA={true} smallButtons={true}/>;
+							return (
+								<Colour
+									colourID={colour.id}
+									key={colour.id}
+									editCTA={true}
+									deleteCTA={true}
+									collectionCTA={true}
+									smallButtons={true}
+								/>
+							);
 						})}
 					</List>
 				)}

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
+
 import navigationLinks from "../../data/navigationLinks";
 import { theme } from "../../shared-styles/theme.styled";
 import { NavigationBackHomeWrapper, NavigationLink, NavigationWrapper } from "./navigation.styled";
@@ -13,21 +14,17 @@ const Navigation = () => {
 		return links.map((link) => {
 			return (
 				<NavigationLink to={link.link} key={link.id} $active={link.link === currentLocation}>
-					{link.icon && (<FontAwesomeIcon icon={link.icon} color={theme.colours.white} />)}
+					{link.icon && <FontAwesomeIcon icon={link.icon} color={theme.colours.white} />}
 					{link.label}
 				</NavigationLink>
 			);
-		})
+		});
 	};
 
 	return (
 		<NavigationWrapper data-current={location.pathname}>
 			{createLinks(navigationLinks.tools)}
-				{!homepage && (
-					<NavigationBackHomeWrapper>
-						{createLinks(navigationLinks.historyNav)}
-					</NavigationBackHomeWrapper>
-				)}
+			{!homepage && <NavigationBackHomeWrapper>{createLinks(navigationLinks.historyNav)}</NavigationBackHomeWrapper>}
 		</NavigationWrapper>
 	);
 };

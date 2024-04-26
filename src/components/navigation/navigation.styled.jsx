@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
 
@@ -26,37 +26,37 @@ export const NavigationBackHomeWrapper = styled.div`
 `;
 
 export const NavigationLink = styled(Link)`
-        color: ${(props) => (props.$active ? theme.colours.white : theme.colours.CTA)};
-		display: block;
-		padding: ${theme.sizes.spacings.default};
-		position: relative;
-		text-align: right;
-		transition: color 300ms ease-in-out;
-		width: 100%;
+	color: ${(props) => (props.$active ? theme.colours.white : theme.colours.CTA)};
+	display: block;
+	padding: ${theme.sizes.spacings.default};
+	position: relative;
+	text-align: right;
+	transition: color 300ms ease-in-out;
+	width: 100%;
+
+	&::after {
+		background-color: ${theme.colours.CTA};
+		bottom: 0;
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: width 300ms ease-out;
+		width: ${(props) => (props.$active ? "100%" : "0")};
+		z-index: -1;
+	}
+
+	svg {
+		left: ${theme.sizes.spacings.default};
+		position: absolute;
+	}
+
+	&:hover,
+	&:focus {
+		color: ${theme.colours.white};
 
 		&::after {
-			background-color: ${theme.colours.CTA};
-			bottom: 0;
-			content: "";
-			position: absolute;
-			right: 0;
-			top: 0;
-			transition: width 300ms ease-out;
-			width: ${(props) => (props.$active ? "100%" : "0")};
-			z-index: -1;
+			width: 100%;
 		}
-
-		svg {
-			left: ${theme.sizes.spacings.default};
-			position: absolute;
-		}
-
-		&:hover,
-		&:focus {
-			color: ${theme.colours.white};
-
-			&::after {
-				width: 100%;
-			}
-		}
+	}
 `;

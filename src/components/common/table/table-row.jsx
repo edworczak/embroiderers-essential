@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 
 import { TableRowStyled } from "./table.styled";
 
-const TableRow = ({ label, text, key }) => {
+const TableRow = ({ label, text }) => {
 	return (
-		<TableRowStyled key={key}>
+		<TableRowStyled>
 			<span>{label}</span>
 			<span>{text}</span>
 		</TableRowStyled>
@@ -12,9 +12,8 @@ const TableRow = ({ label, text, key }) => {
 };
 
 TableRow.propTypes = {
-	label: PropTypes.string,
-	text: PropTypes.string,
-	key: PropTypes.string,
+	label: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
 };
 
 export default TableRow;

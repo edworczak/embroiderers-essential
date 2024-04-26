@@ -35,7 +35,7 @@ export const CardCTAWrapper = styled.div`
 	${CardItemCTAsWrapper} {
 		${(props) =>
 			props.$verticalCard
-              ? `border-left: 1px solid ${theme.colours.kashmir}`
+				? `border-left: 1px solid ${theme.colours.kashmir}`
 				: `border-top: 1px solid ${theme.colours.kashmir}`};
 		flex-direction: ${(props) => (props.$verticalCard ? "column" : "row")};
 	}

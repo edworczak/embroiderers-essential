@@ -1,7 +1,7 @@
 import { faBoxesStacked, faCartShopping, faPencil, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
-import { createCTAprops } from "../../app/common";
 
+import { createCTAprops } from "../../app/common";
 import brandNames from "../../data/brandNames";
 import colours from "../../data/colours";
 import CardCTA from "../card-cta/card-cta";
@@ -9,7 +9,18 @@ import TableBody from "../common/table/table-body";
 import TableRow from "../common/table/table-row";
 import { ColourInfo, ColourName, ColourSwatch } from "./colour.styled";
 
-const Colour = ({ colourID, noCTAs, verticalCardLayout, description, collectionCTA, cartCTA, editCTA, deleteCTA, smallButtons = false, showSubstitutes = false }) => {
+const Colour = ({
+	colourID,
+	noCTAs,
+	verticalCardLayout,
+	description,
+	collectionCTA,
+	cartCTA,
+	editCTA,
+	deleteCTA,
+	smallButtons = false,
+	showSubstitutes = false,
+}) => {
 	const colour = colours.filter((colour) => {
 		return colour.id === colourID;
 	})[0];
