@@ -7,6 +7,8 @@ export const AppWrapper = styled.div`
 `;
 
 export const Content = styled.div`
+	box-sizing: border-box;
+	padding-left: 200px;
 	width: 100%;
 `;
 
@@ -30,4 +32,37 @@ export const Row = styled.div`
 	${(props) => (props.$justify ? `justify-content: ${props.$justify}` : "")};
 	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
 	width: 100%;
+`;
+
+export const HeadingRow = styled.div`
+	align-items: center;
+	background-color: ${theme.colours.white};
+	display: flex;
+	justify-content: space-between;
+	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
+`;
+
+export const HeadingCTAWrapper = styled.div`
+	display: flex;
+	gap: ${theme.sizes.spacings.default};
+	justify-content: flex-end;
+`;
+
+export const HeadingPrimary = styled.h1`
+	${(props) => (props.$marginBottom ? `margin-bottom: ${theme.sizes.spacings.default}` : "")};
+`;
+
+export const HeadingSecondary = styled.h2`
+	margin-bottom: ${theme.sizes.spacings.default};
+`;
+
+export const CounterItem = styled.div`
+	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
+
+	span:nth-child(2) {
+		display: inline-block;
+		font-family: ${theme.typography.fontFamilyCursive};
+		font-size: ${theme.typography.fontSize.h2};
+		margin-left: ${theme.sizes.spacings.small};
+	}
 `;
