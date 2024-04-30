@@ -37,36 +37,66 @@ const pl = {
 		},
 	},
 	projects: {
-		title: "twoje projekty",
+		title: "Twoje projekty",
+		navigationLink: "projekty",
 		null: "nie masz żadnych projektów",
 		openProjects: "otwarte projekty",
 		finishedProjects: "ukończone projekty",
 		add: "nowy projekt",
 	},
+	project: {
+		start: {
+			default: "data rozpoczęcia",
+			short: "start",
+		},
+		finish: {
+			default: "data zakończenia",
+			short: "koniec",
+		},
+		time: {
+			default: "czas pracy",
+			short: "czas",
+		},
+		hoop: {
+			default: "rozmiar tamborka",
+			short: "tamborek",
+		},
+		fabric: {
+			default: "materiał/tkanina",
+			short: "materiał",
+		},
+	},
 	palettes: {
-		title: "twoje palety",
+		title: "Twoje palety",
+		navigationLink: "palety",
 		null: "nie masz jeszcze żadnych palet",
 	},
 	shoppingList: {
 		title: "lista zakupów",
+		navigationLink: "lista zakupów",
 		null: "wszystko jest w zapasie",
 	},
 	substitutes: {
 		title: "zamienniki kolorów mulin",
+		navigationLink: "zamienniki kolorów",
 		null: "jeszcze nic tu nie ma",
 	},
 	threads: {
 		title: "lista kolorów mulin",
-		null: "jeszcze nic tu nie ma",
+		navigationLink: "muliny",
+		null: "nie masz dodanych żadnych mulin do zapasów",
 	},
 	search: {
 		title: "szukaj",
+		navigationLink: "szukaj",
 	},
 	settings: {
 		title: "ustawienia",
+		navigationLink: "ustawienia",
 	},
 	profile: {
 		title: "profil",
+		navigationLink: "Twój profil",
 		name: "imię",
 	},
 	help: {
