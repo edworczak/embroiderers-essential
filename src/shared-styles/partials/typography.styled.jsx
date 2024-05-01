@@ -10,9 +10,9 @@ export const typography = {
 	fontFamilyCursive: "'Sacramento', cursive",
 	fontSize: {
 		default: "16px",
-		h1: "2.4em",
-		h2: "2em",
-		h3: "1.8em",
+		h1: "2.4rem",
+		h2: "2rem",
+		h3: "1.8rem",
 	},
 	fontWeight: {
 		default: 300,

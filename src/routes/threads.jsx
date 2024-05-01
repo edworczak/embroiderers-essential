@@ -17,7 +17,7 @@ const ThreadsPage = () => {
 			<Row>
 				{!dummyUser.threads && pl.threads.null}
 				{dummyUser.threads && (
-					<List numberOfColumns={3}>
+					<List maxColumns={2}>
 						{dummyUser.threads.map((colour) => {
 							return (
 								<Colour colourID={colour.id} key={colour.id} noSubstitutes={true} deleteCTA={true} cartCTA={true} />

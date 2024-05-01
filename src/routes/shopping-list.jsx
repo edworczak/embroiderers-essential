@@ -1,4 +1,4 @@
-import { faPencil, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 import { HeadingCTAWrapper, HeadingRow, Row } from "../app/app.styled";
 import Colour from "../components/colour/colour";
@@ -28,7 +28,6 @@ const ShoppingListPage = () => {
 								<Colour
 									colourID={colour.id}
 									key={colour.id}
-									editCTA={true}
 									deleteCTA={true}
 									collectionCTA={true}
 									smallButtons={true}
@@ -43,10 +42,9 @@ const ShoppingListPage = () => {
 					<List maxColumns={2}>
 						{dummyUser.shoppingList.others.map((item) => {
 							return (
-								<Card key={item.id} alignCTAsToRight={true}>
+								<Card key={item.id}>
 									<CardContent>{item.name}</CardContent>
 									<CardCTAsWrapperStyled>
-										<IconButton icon={faPencil} text={"edytuj"} iconOnly={true} />
 										<IconButton icon={faTrashCan} text={"usuń"} iconOnly={true} />
 									</CardCTAsWrapperStyled>
 								</Card>

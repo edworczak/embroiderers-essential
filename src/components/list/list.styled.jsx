@@ -12,7 +12,7 @@ export const ListWrapper = styled.div`
 				return;
 			case 2:
 				return css`
-					@media screen and (min-width: 1072px) {
+					@media screen and (${theme.sizes.breakpoints.twoColumns}) {
 						grid-template-columns: 1fr 1fr;
 					}
 				`;

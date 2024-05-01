@@ -31,7 +31,7 @@ export const ColourName = styled.h3`
 		font-size: ${theme.typography.fontSize.default};
 		font-weight: ${theme.typography.fontWeight.default};
 		display: inline-block;
-		margin: 0 ${theme.sizes.spacings.default} 0 0;
+		margin: 0 ${theme.sizes.spacings.small} 0 0;
 	}
 `;
 

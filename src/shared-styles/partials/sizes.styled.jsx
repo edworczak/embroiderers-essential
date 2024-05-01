@@ -1,6 +1,5 @@
 export const sizes = {
 	breakpoints: {
-		mobile: "750px",
 		columns1: "360px",
 		columns2: "530px",
 		columns3: "700px",
@@ -9,6 +8,9 @@ export const sizes = {
 		columns6: "1230px",
 		columns7: "1400px",
 		navigation: "max-width: 800px",
+		mobileView: "max-width: 600px",
+		twoColumns: "min-width: 970px",
+		smallCardThumbnail: "max-width: 1072px",
 	},
 	spacings: {
 		small: "8px",

@@ -21,7 +21,7 @@ export const CardThumbnailStyled = styled.div`
 	margin-left: ${theme.sizes.spacings.default};
 	width: 100px;
 
-	@media screen and (max-width: 600px) {
+	@media screen and (${theme.sizes.breakpoints.smallCardThumbnail}) {
 		width: 40px;
 	}
 `;
@@ -44,7 +44,7 @@ export const CardStyled = styled.div`
 	transition: 300ms;
 	width: auto;
 
-	@media screen and (max-width: 600px) {
+	@media screen and (${theme.sizes.breakpoints.mobileView}) {
 		flex-direction: column;
 		justify-content: flex-start;
 	}

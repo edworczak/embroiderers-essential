@@ -28,7 +28,7 @@ const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, delete
 				</ColourName>
 				{description && <p>{description}</p>}
 				{showSubstitutes && (
-					<TableBody>
+					<TableBody colourRows={true}>
 						{brandNames.map((brand) => {
 							return substituteLine(brand, colour[brand.code]);
 						})}

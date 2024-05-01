@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import { IconButtonWrapper } from "../components/icon-button/icon-button.styled";
 import { theme } from "../shared-styles/theme.styled";
 
 export const AppWrapper = styled.div`
@@ -36,6 +37,10 @@ export const Row = styled.div`
 	${(props) => (props.$justify ? `justify-content: ${props.$justify}` : "")};
 	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
 	width: 100%;
+
+	@media screen and (${theme.sizes.breakpoints.mobileView}) {
+		padding: ${theme.sizes.spacings.default};
+	}
 `;
 
 export const HeadingRow = styled.div`
@@ -44,6 +49,23 @@ export const HeadingRow = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
+
+	@media screen and (${theme.sizes.breakpoints.mobileView}) {
+		padding: ${theme.sizes.spacings.default};
+	}
+
+	${IconButtonWrapper} {
+		@media screen and (${theme.sizes.breakpoints.mobileView}) {
+			a {
+				gap: 0;
+				padding: ${theme.sizes.spacings.default};
+			}
+
+			span {
+				font-size: 0;
+			}
+		}
+	}
 `;
 
 export const HeadingCTAWrapper = styled.div`
