@@ -1,10 +1,13 @@
+import { HeadingPrimary, HeadingRow } from "../app/app.styled";
 import pl from "../data/pl";
 
 const SettingsPage = () => {
 	return (
-		<div>
-			<h1>{pl.settings.title}</h1>
-		</div>
+		<>
+			<HeadingRow>
+				<HeadingPrimary>{pl.settings.title}</HeadingPrimary>
+			</HeadingRow>
+		</>
 	);
 };
 

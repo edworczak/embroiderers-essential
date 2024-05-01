@@ -11,10 +11,10 @@ export const CardItemCTAsWrapper = styled.div`
 
 export const CardCTAWrapper = styled.div`
 	background: white;
-	${(props) => (props.$smallColourCard ? "display: flex" : "")};
-	flex: 1 1 0;
-	${(props) => (props.$smallColourCard ? "justify-content: space-between" : "")};
-	min-width: 260px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: ${(props) => (props.$verticalCard ? "row" : "column")};
+	${(props) => (props.$verticalCard ? "justify-content: space-between" : "")};
 	overflow: hidden;
 	position: relative;
 	transition: 300ms;
@@ -26,6 +26,7 @@ export const CardCTAWrapper = styled.div`
 
 	> a {
 		display: block;
+		flex-grow: 1;
 		padding: ${theme.sizes.spacings.default};
 		position: relative;
 		text-decoration: none;
@@ -33,9 +34,9 @@ export const CardCTAWrapper = styled.div`
 
 	${CardItemCTAsWrapper} {
 		${(props) =>
-			props.$smallColourCard
+			props.$verticalCard
 				? `border-left: 1px solid ${theme.colours.kashmir}`
 				: `border-top: 1px solid ${theme.colours.kashmir}`};
-		flex-direction: ${(props) => (props.$smallColourCard ? "column" : "row")};
+		flex-direction: ${(props) => (props.$verticalCard ? "column" : "row")};
 	}
 `;

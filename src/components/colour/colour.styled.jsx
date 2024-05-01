@@ -15,27 +15,25 @@ export const ColourInfo = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	gap: ${theme.sizes.spacings.big};
+	gap: ${theme.sizes.spacings.default};
+	height: 100%;
+	justify-content: space-between;
 	padding-left: 46px;
 	width: 100%;
 `;
 
-export const ColourName = styled.div`
-	h3 {
+export const ColourName = styled.h3`
+	color: ${theme.typography.colours.body};
+
+	span {
+		font-family: ${theme.typography.fontFamily};
+		font-size: ${theme.typography.fontSize.default};
+		font-weight: ${theme.typography.fontWeight.default};
 		display: inline-block;
-		margin: 0 0 0 ${theme.sizes.spacings.default};
+		margin: 0 ${theme.sizes.spacings.default} 0 0;
 	}
 `;
 
 export const ColourSubstituteWrapper = styled.div`
 	padding-left: 0;
-`;
-export const ColourSubstitute = styled.div`
-	display: flex;
-	gap: ${theme.sizes.spacings.default};
-	justify-content: space-between;
-
-	&:not(:first-child) {
-		margin-top: ${theme.sizes.spacings.small};
-	}
 `;
