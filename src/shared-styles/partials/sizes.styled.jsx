@@ -8,6 +8,7 @@ export const sizes = {
 		columns5: "1060px",
 		columns6: "1230px",
 		columns7: "1400px",
+		navigation: "max-width: 800px",
 	},
 	spacings: {
 		small: "8px",

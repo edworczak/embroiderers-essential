@@ -43,7 +43,8 @@ const ProjectInfoPage = () => {
 					</Row>
 				</ProjectHeader>
 				<Row>
-					<HeadingSecondary>thread colours</HeadingSecondary>
+					<HeadingSecondary>{pl.project.colourList.default}</HeadingSecondary>
+					{!project.threads && <p>{pl.project.colourList.null}</p>}
 					{project.threads && (
 						<List numberOfColumns={3}>
 							{project.threads.map((thread) => {

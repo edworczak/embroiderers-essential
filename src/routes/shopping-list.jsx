@@ -1,7 +1,10 @@
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPencil, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 import { HeadingCTAWrapper, HeadingRow, Row } from "../app/app.styled";
 import Colour from "../components/colour/colour";
+import Card from "../components/common/card/card";
+import { CardCTAsWrapperStyled } from "../components/common/card/card.styled";
+import CardContent from "../components/common/card/cardContent";
 import IconButton from "../components/icon-button/icon-button";
 import List from "../components/list/list";
 import dummyUser from "../data/dummyUser";
@@ -19,7 +22,7 @@ const ShoppingListPage = () => {
 			<Row>
 				{!dummyUser.shoppingList.threads && pl.shoppingList.null}
 				{dummyUser.shoppingList.threads && (
-					<List numberOfColumns={4}>
+					<List maxColumns={2}>
 						{dummyUser.shoppingList.threads.map((colour) => {
 							return (
 								<Colour
@@ -30,6 +33,23 @@ const ShoppingListPage = () => {
 									collectionCTA={true}
 									smallButtons={true}
 								/>
+							);
+						})}
+					</List>
+				)}
+			</Row>
+			<Row>
+				{dummyUser.shoppingList.others && (
+					<List maxColumns={2}>
+						{dummyUser.shoppingList.others.map((item) => {
+							return (
+								<Card key={item.id} alignCTAsToRight={true}>
+									<CardContent>{item.name}</CardContent>
+									<CardCTAsWrapperStyled>
+										<IconButton icon={faPencil} text={"edytuj"} iconOnly={true} />
+										<IconButton icon={faTrashCan} text={"usuń"} iconOnly={true} />
+									</CardCTAsWrapperStyled>
+								</Card>
 							);
 						})}
 					</List>

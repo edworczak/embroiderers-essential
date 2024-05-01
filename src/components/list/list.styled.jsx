@@ -1,9 +1,25 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
 
 export const ListWrapper = styled.div`
 	gap: ${(props) => (props.$gap ? props.$gap : theme.sizes.spacings.default)};
 	display: grid;
-	grid-template-columns: ${(props) => (props.$columnsGrid ? props.$columnsGrid : "1fr")};
+
+	${(props) => {
+		switch (props.$maxColumns) {
+			case 1:
+				return;
+			case 2:
+				return css`
+					@media screen and (min-width: 1072px) {
+						grid-template-columns: 1fr 1fr;
+					}
+				`;
+			default:
+				return css`
+					grid-template-columns: 1fr;
+				`;
+		}
+	}}
 `;

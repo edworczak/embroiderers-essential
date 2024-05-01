@@ -20,15 +20,7 @@ const ThreadsPage = () => {
 					<List numberOfColumns={3}>
 						{dummyUser.threads.map((colour) => {
 							return (
-								<Colour
-									colourID={colour.id}
-									key={colour.id}
-									noSubstitutes={true}
-									editCTA={true}
-									deleteCTA={true}
-									cartCTA={true}
-									smallButtons={true}
-								/>
+								<Colour colourID={colour.id} key={colour.id} noSubstitutes={true} deleteCTA={true} cartCTA={true} />
 							);
 						})}
 					</List>

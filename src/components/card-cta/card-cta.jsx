@@ -8,7 +8,7 @@ const CardCTA = ({ children, url, CTAs, verticalCardLayout }) => {
 	return (
 		<CardCTAWrapper $verticalCard={verticalCardLayout}>
 			<Link to={url}>{children}</Link>
-			{CTAs.length > 0 && (
+			{CTAs && (
 				<CardItemCTAsWrapper>
 					{CTAs.map((CTA) => {
 						return <IconButton key={CTA.keyName} icon={CTA.icon} text={CTA.text} iconOnly={CTA.iconOnly} />;

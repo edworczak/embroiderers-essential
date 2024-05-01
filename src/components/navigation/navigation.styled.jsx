@@ -17,6 +17,10 @@ export const NavigationWrapper = styled.nav`
 	transition: ${theme.decorations.transition};
 	width: 200px;
 	z-index: 2;
+
+	@media screen and (${theme.sizes.breakpoints.navigation}) {
+		width: 50px;
+	}
 `;
 
 export const NavigationBackHomeWrapper = styled.div`
@@ -34,6 +38,13 @@ export const NavigationLink = styled(Link)`
 	transition: color 300ms ease-in-out;
 	width: 100%;
 
+	@media screen and (${theme.sizes.breakpoints.navigation}) {
+		height: 50px;
+		span {
+			font-size: 0;
+		}
+	}
+
 	&::after {
 		background-color: ${theme.colours.CTA};
 		bottom: 0;
@@ -49,6 +60,11 @@ export const NavigationLink = styled(Link)`
 	svg {
 		left: ${theme.sizes.spacings.default};
 		position: absolute;
+		transition: color 300ms ease-in-out;
+
+		@media screen and (${theme.sizes.breakpoints.navigation}) {
+			color: ${theme.colours.CTA};
+		}
 	}
 
 	&:hover,
@@ -57,6 +73,10 @@ export const NavigationLink = styled(Link)`
 
 		&::after {
 			width: 100%;
+		}
+
+		svg {
+			color: white;
 		}
 	}
 `;

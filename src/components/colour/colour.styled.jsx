@@ -24,6 +24,7 @@ export const ColourInfo = styled.div`
 
 export const ColourName = styled.h3`
 	color: ${theme.typography.colours.body};
+	margin-bottom: ${theme.sizes.spacings.default};
 
 	span {
 		font-family: ${theme.typography.fontFamily};

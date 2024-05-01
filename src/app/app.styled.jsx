@@ -10,6 +10,10 @@ export const Content = styled.div`
 	box-sizing: border-box;
 	padding-left: 200px;
 	width: 100%;
+
+	@media screen and (${theme.sizes.breakpoints.navigation}) {
+		padding-left: 50px;
+	}
 `;
 
 export const Section = styled.section`

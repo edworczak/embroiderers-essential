@@ -11,7 +11,7 @@ const SubstitutesPage = () => {
 				<HeadingPrimary>{pl.substitutes.title}</HeadingPrimary>
 			</HeadingRow>
 			<Row>
-				<List numberOfColumns={4}>
+				<List maxColumns={2}>
 					{colours.map((colour) => {
 						return (
 							<Colour

@@ -15,7 +15,7 @@ const Navigation = () => {
 			return (
 				<NavigationLink to={link.link} key={link.id} $active={link.link === currentLocation}>
 					{link.icon && <FontAwesomeIcon icon={link.icon} color={theme.colours.white} />}
-					{link.label}
+					<span>{link.label}</span>
 				</NavigationLink>
 			);
 		});

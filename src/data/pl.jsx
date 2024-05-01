@@ -65,6 +65,13 @@ const pl = {
 			default: "materiał/tkanina",
 			short: "materiał",
 		},
+		colourList: {
+			default: "lista kolorów",
+			null: "nie ma jeszcze dodanych żadnych kolorów",
+		},
+		budget: {
+			default: "budżet",
+		},
 	},
 	palettes: {
 		title: "Twoje palety",

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import { ListWrapper } from "./list.styled";
 
-const List = ({ children, column, centerItems, scroll, numberOfColumns }) => {
+const List = ({ children, column, centerItems, scroll, numberOfColumns, maxColumns }) => {
 	const columnsToGrid = (numberOfColumns) => {
 		let gridColumns = "";
 
@@ -14,7 +14,13 @@ const List = ({ children, column, centerItems, scroll, numberOfColumns }) => {
 	};
 
 	return (
-		<ListWrapper $column={column} $center={centerItems} $scroll={scroll} $columnsGrid={columnsToGrid(numberOfColumns)}>
+		<ListWrapper
+			$column={column}
+			$center={centerItems}
+			$scroll={scroll}
+			$columnsGrid={columnsToGrid(numberOfColumns)}
+			$maxColumns={maxColumns}
+		>
 			{children}
 		</ListWrapper>
 	);
@@ -26,6 +32,7 @@ List.propTypes = {
 	column: PropTypes.bool,
 	centerItems: PropTypes.bool,
 	numberOfColumns: PropTypes.number,
+	maxColumns: PropTypes.number,
 };
 
 export default List;
