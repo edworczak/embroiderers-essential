@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
-import { CounterItem } from "../../app/app.styled";
 import pl from "../../data/pl";
+import Counter from "../_common/counter/counter";
 
 const Welcome = () => {
 	const shoppingCount = useSelector((state) => state.shoppingListItemsCount.value);
@@ -10,18 +10,9 @@ const Welcome = () => {
 
 	return (
 		<>
-			<CounterItem>
-				<span>{pl.shoppingList.title}:</span>
-				<span>{shoppingCount}</span>
-			</CounterItem>
-			<CounterItem>
-				<span>{pl.projects.openProjects}:</span>
-				<span>{openProjectsCount}</span>
-			</CounterItem>
-			<CounterItem>
-				<span>{pl.projects.finishedProjects}:</span>
-				<span>{finishedProjectsCount}</span>
-			</CounterItem>
+			<Counter counterNumber={shoppingCount} text={pl.shoppingList.title} />
+			<Counter counterNumber={openProjectsCount} text={pl.projects.openProjects} />
+			<Counter counterNumber={finishedProjectsCount} text={pl.projects.finishedProjects} />
 		</>
 	);
 };

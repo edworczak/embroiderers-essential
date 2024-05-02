@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { theme } from "../../shared-styles/theme.styled";
+import { theme } from "../../../shared-styles/theme.styled";
 
 export const IconButtonWrapper = styled.div`
 	display: inline-block;

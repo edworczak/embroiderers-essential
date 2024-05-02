@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { IconButtonWrapper } from "../components/icon-button/icon-button.styled";
+import { IconButtonWrapper } from "../components/_common/icon-button/icon-button.styled";
 import { theme } from "../shared-styles/theme.styled";
 
 export const AppWrapper = styled.div`

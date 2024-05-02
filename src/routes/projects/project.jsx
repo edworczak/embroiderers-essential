@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 import { HeadingPrimary, HeadingSecondary, Row } from "../../app/app.styled";
 import Colour from "../../components/colour/colour";
-import TableBody from "../../components/common/table/table-body";
-import TableRow from "../../components/common/table/table-row";
+import TableBody from "../../components/_common/table/table-body";
+import TableRow from "../../components/_common/table/table-row";
 import List from "../../components/list/list";
 import colours from "../../data/colours";
 import dummyUser from "../../data/dummyUser";

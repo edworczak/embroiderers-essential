@@ -2,10 +2,10 @@ import { faClockRotateLeft, faPencil } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 
 import { theme } from "../../shared-styles/theme.styled";
-import Card from "../common/card/card";
-import { CardCTAsWrapperStyled } from "../common/card/card.styled";
-import CardContent from "../common/card/cardContent";
-import IconButton from "../icon-button/icon-button";
+import Card from "../_common/card/card";
+import { CardCTAsWrapperStyled } from "../_common/card/card.styled";
+import CardContent from "../_common/card/cardContent";
+import IconButton from "../_common/icon-button/icon-button";
 import { ProjectTitle, ProjectTitleWrapper } from "./project-button.styled";
 
 const ProjectButton = ({ project }) => {

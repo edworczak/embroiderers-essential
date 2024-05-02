@@ -2,7 +2,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 import { HeadingPrimary, HeadingRow, Row } from "../app/app.styled";
 import Colour from "../components/colour/colour";
-import IconButton from "../components/icon-button/icon-button";
+import IconButton from "../components/_common/icon-button/icon-button";
 import List from "../components/list/list";
 import dummyUser from "../data/dummyUser";
 import pl from "../data/pl";

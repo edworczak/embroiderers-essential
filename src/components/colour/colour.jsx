@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 
 import brandNames from "../../data/brandNames";
 import colours from "../../data/colours";
-import Card from "../common/card/card";
-import { CardCTAsWrapperStyled } from "../common/card/card.styled";
-import CardContent from "../common/card/cardContent";
-import TableBody from "../common/table/table-body";
-import TableRow from "../common/table/table-row";
-import IconButton from "../icon-button/icon-button";
+import Card from "../_common/card/card";
+import { CardCTAsWrapperStyled } from "../_common/card/card.styled";
+import CardContent from "../_common/card/cardContent";
+import TableBody from "../_common/table/table-body";
+import TableRow from "../_common/table/table-row";
+import IconButton from "../_common/icon-button/icon-button";
 import { ColourName } from "./colour.styled";
 
 const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, deleteCTA, showSubstitutes = false }) => {

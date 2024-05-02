@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import { theme } from "../../shared-styles/theme.styled";
+import { theme } from "../../../shared-styles/theme.styled";
 import { IconButtonWrapper } from "./icon-button.styled";
 
 const IconButton = (props) => {

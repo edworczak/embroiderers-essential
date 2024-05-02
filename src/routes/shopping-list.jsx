@@ -2,10 +2,10 @@ import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 import { HeadingCTAWrapper, HeadingRow, Row } from "../app/app.styled";
 import Colour from "../components/colour/colour";
-import Card from "../components/common/card/card";
-import { CardCTAsWrapperStyled } from "../components/common/card/card.styled";
-import CardContent from "../components/common/card/cardContent";
-import IconButton from "../components/icon-button/icon-button";
+import Card from "../components/_common/card/card";
+import { CardCTAsWrapperStyled } from "../components/_common/card/card.styled";
+import CardContent from "../components/_common/card/cardContent";
+import IconButton from "../components/_common/icon-button/icon-button";
 import List from "../components/list/list";
 import dummyUser from "../data/dummyUser";
 import pl from "../data/pl";

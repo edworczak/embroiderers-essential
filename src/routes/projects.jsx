@@ -1,7 +1,8 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-import { CounterItem, HeadingRow, HeadingSecondary, Row } from "../app/app.styled";
-import IconButton from "../components/icon-button/icon-button";
+import { HeadingRow, HeadingSecondary, Row } from "../app/app.styled";
+import Counter from "../components/_common/counter/counter";
+import IconButton from "../components/_common/icon-button/icon-button";
 import ProjectsList from "../components/projects-list/projects-list";
 import pl from "../data/pl";
 import { theme } from "../shared-styles/theme.styled";
@@ -18,14 +19,8 @@ const ProjectsPage = () => {
 				<ProjectsList isOpenProjects={true} />
 			</Row>
 			<Row $background={theme.colours.white} $useFlex={true} $justify={"center"}>
-				<CounterItem>
-					<span>{pl.projects.openProjects}:</span>
-					<span>12</span>
-				</CounterItem>
-				<CounterItem>
-					<span>{pl.projects.finishedProjects}:</span>
-					<span>42</span>
-				</CounterItem>
+				<Counter counterNumber={12} text={pl.projects.openProjects} />
+				<Counter counterNumber={47} text={pl.projects.finishedProjects} />
 			</Row>
 			<Row>
 				<HeadingSecondary>{pl.projects.finishedProjects}</HeadingSecondary>
