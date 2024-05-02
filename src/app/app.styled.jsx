@@ -12,7 +12,7 @@ export const Content = styled.div`
 	padding-left: 200px;
 	width: 100%;
 
-	@media screen and (${theme.sizes.breakpoints.navigation}) {
+	@media screen and (${theme.sizes.breakpoints.tabletPortraitDown}) {
 		padding-left: 50px;
 	}
 `;
@@ -38,7 +38,7 @@ export const Row = styled.div`
 	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
 	width: 100%;
 
-	@media screen and (${theme.sizes.breakpoints.mobileView}) {
+	@media screen and (${theme.sizes.breakpoints.mobileDown}) {
 		padding: ${theme.sizes.spacings.default};
 	}
 `;
@@ -50,12 +50,12 @@ export const HeadingRow = styled.div`
 	justify-content: space-between;
 	padding: ${theme.sizes.spacings.default} ${theme.sizes.spacings.big};
 
-	@media screen and (${theme.sizes.breakpoints.mobileView}) {
+	@media screen and (${theme.sizes.breakpoints.mobileDown}) {
 		padding: ${theme.sizes.spacings.default};
 	}
 
 	${IconButtonWrapper} {
-		@media screen and (${theme.sizes.breakpoints.mobileView}) {
+		@media screen and (${theme.sizes.breakpoints.mobileDown}) {
 			a {
 				gap: 0;
 				padding: ${theme.sizes.spacings.default};

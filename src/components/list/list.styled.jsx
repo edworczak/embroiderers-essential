@@ -8,11 +8,9 @@ export const ListWrapper = styled.div`
 
 	${(props) => {
 		switch (props.$maxColumns) {
-			case 1:
-				return;
 			case 2:
 				return css`
-					@media screen and (${theme.sizes.breakpoints.twoColumns}) {
+					@media screen and (${theme.sizes.breakpoints.twoColumnsUp}) {
 						grid-template-columns: 1fr 1fr;
 					}
 				`;

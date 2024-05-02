@@ -11,7 +11,10 @@ import { ProjectTitle, ProjectTitleWrapper } from "./project-button.styled";
 const ProjectButton = ({ project }) => {
 	return (
 		<Card alignCTAsToRight={true}>
-			<CardContent thumbnail={`url(${project.img ? project.img : theme.decorations.defaultImages.project})`}>
+			<CardContent
+				url={`/projects/project?id=${project.id}`}
+				thumbnail={`url(${project.img ? project.img : theme.decorations.defaultImages.project})`}
+			>
 				<ProjectTitleWrapper>
 					<ProjectTitle>{project.name}</ProjectTitle>
 				</ProjectTitleWrapper>

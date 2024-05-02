@@ -5,6 +5,12 @@ import { theme } from "../../../shared-styles/theme.styled";
 export const CardContentStyled = styled.div`
 	display: flex;
 	width: 100%;
+		
+	> a {
+		display: flex;
+		height: 100%;
+		width: 100%;
+	}
 `;
 
 export const CardInfoStyled = styled.div`
@@ -21,7 +27,15 @@ export const CardThumbnailStyled = styled.div`
 	margin-left: ${theme.sizes.spacings.default};
 	width: 100px;
 
-	@media screen and (${theme.sizes.breakpoints.smallCardThumbnail}) {
+	@media screen and (${theme.sizes.breakpoints.largeScreenDown}) {
+		width: 40px;
+	}
+
+	@media screen and (${theme.sizes.breakpoints.oneColumnDown}) {
+		width: 100px;
+	}
+
+	@media screen and (${theme.sizes.breakpoints.smallestScreenDown}) {
 		width: 40px;
 	}
 `;
@@ -44,7 +58,7 @@ export const CardStyled = styled.div`
 	transition: 300ms;
 	width: auto;
 
-	@media screen and (${theme.sizes.breakpoints.mobileView}) {
+	@media screen and (${theme.sizes.breakpoints.mobileDown}) {
 		flex-direction: column;
 		justify-content: flex-start;
 	}

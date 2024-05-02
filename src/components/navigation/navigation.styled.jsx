@@ -18,7 +18,7 @@ export const NavigationWrapper = styled.nav`
 	width: 200px;
 	z-index: 2;
 
-	@media screen and (${theme.sizes.breakpoints.navigation}) {
+	@media screen and (${theme.sizes.breakpoints.tabletPortraitDown}) {
 		width: 50px;
 	}
 `;
@@ -38,8 +38,9 @@ export const NavigationLink = styled(Link)`
 	transition: color 300ms ease-in-out;
 	width: 100%;
 
-	@media screen and (${theme.sizes.breakpoints.navigation}) {
+	@media screen and (${theme.sizes.breakpoints.tabletPortraitDown}) {
 		height: 50px;
+
 		span {
 			font-size: 0;
 		}
@@ -62,7 +63,7 @@ export const NavigationLink = styled(Link)`
 		position: absolute;
 		transition: color 300ms ease-in-out;
 
-		@media screen and (${theme.sizes.breakpoints.navigation}) {
+		@media screen and (${theme.sizes.breakpoints.tabletPortraitDown}) {
 			color: ${theme.colours.CTA};
 		}
 	}
