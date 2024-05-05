@@ -6,6 +6,7 @@ import Card from "../_common/card/card";
 import { CardCTAsWrapperStyled } from "../_common/card/card.styled";
 import CardContent from "../_common/card/cardContent";
 import IconButton from "../_common/icon-button/icon-button";
+import TableRow from "../_common/table/table-row";
 import { ProjectTitle, ProjectTitleWrapper } from "./project-button.styled";
 
 const ProjectButton = ({ project }) => {
@@ -17,10 +18,11 @@ const ProjectButton = ({ project }) => {
 			>
 				<ProjectTitleWrapper>
 					<ProjectTitle>{project.name}</ProjectTitle>
+					{project.finishDate && <TableRow label={"ukończono"} text={project.finishDate}/>}
 				</ProjectTitleWrapper>
 			</CardContent>
 			<CardCTAsWrapperStyled>
-				<IconButton icon={faPencil} label={"edytuj"} iconOnly={true} onClick={"#"} />
+				<IconButton icon={faPencil} label={"edytuj"} iconOnly={true} onClick={`/project-dialog?id=${project.id}`} />
 				{!project.finished && (
 					<IconButton icon={faClockRotateLeft} label={"zacznij sesję"} iconOnly={true} onClick={"#"} />
 				)}

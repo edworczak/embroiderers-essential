@@ -18,8 +18,8 @@ const Home = () => {
 				<HeadingPrimaryStyled>embroidery essential</HeadingPrimaryStyled>
 			</Row>
 			<Row $lightBackground={true} contentCentered={true} contentInRow={true} lightBackground={true}>
-				<Counter counterNumber={openProjectsCount} text={pl.projects.openProjects} />
-				<Counter counterNumber={finishedProjectsCount} text={pl.projects.finishedProjects} />
+				<Counter counterNumber={openProjectsCount} text={"zaczęto"} />
+				<Counter counterNumber={finishedProjectsCount} text={"ukończono"} />
 				<Counter counterNumber={shoppingCount} text={pl.shoppingList.title} />
 			</Row>
 			<Row>

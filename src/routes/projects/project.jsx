@@ -61,13 +61,13 @@ const ProjectInfoPage = () => {
 							{project.fabric && <TableRow label={pl.project.fabric.default} text={project.fabric} />}
 						</TableBody>
 					</Row>
-					<ProjectImageWrapper>
+					<ProjectImageWrapper $placeholderImage={!project.img}>
 						<img src={project.img ? project.img : theme.decorations.defaultImages.project} alt={"Zdjęcie projektu"} />
 					</ProjectImageWrapper>
 				</ProjectHeader>
 				<Row contentInRow={true} contentCentered={true}>
 					<IconButton icon={faFlagCheckered} label={"haft ukończony"} onClick={"#"} />
-					<IconButton icon={faPencil} label={"edytuj"} onClick={"#"} />
+					<IconButton icon={faPencil} label={"edytuj"} onClick={`/project-dialog?id=${project.id}`} />
 					<IconButton icon={faClockRotateLeft} label={"zacznij sesję"} onClick={"#"} />
 				</Row>
 				<Row lightBackground={true}>

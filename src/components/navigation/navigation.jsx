@@ -7,7 +7,7 @@ import { theme } from "../../shared-styles/theme.styled";
 import { NavigationBackHomeWrapper, NavigationLink, NavigationWrapper } from "./navigation.styled";
 
 const Navigation = () => {
-	const homepage = useLocation().pathname === `/`;
+	const homepage = useLocation().pathname === `/home`;
 	const currentLocation = useLocation().pathname;
 
 	const createLinks = (links) => {

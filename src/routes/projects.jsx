@@ -17,7 +17,7 @@ const ProjectsPage = () => {
 
 	return (
 		<>
-			<Heading title={pl.projects.title} CTA={{ label: "nowy projekt", icon: faPlus, onClick: "/new-project" }} />
+			<Heading title={pl.projects.title} CTA={{ label: "nowy projekt", icon: faPlus, onClick: "/project-dialog" }} />
 			<RowStyled>
 				<HeadingSecondaryStyled>{pl.projects.openProjects}</HeadingSecondaryStyled>
 				<ProjectsList isOpenProjects={true} />

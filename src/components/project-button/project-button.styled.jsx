@@ -30,13 +30,13 @@ export const ProjectCTAWrapper = styled.div`
 
 export const ProjectTitleWrapper = styled.div`
 	display: flex;
+		flex-direction: column;
 	gap: ${theme.sizes.spacings.big};
 	justify-content: space-between;
 `;
 
 export const ProjectTitle = styled.h3`
 	color: ${theme.colours.dark};
-	margin-bottom: ${theme.sizes.spacings.small};
 	overflow: hidden;
 `;
 

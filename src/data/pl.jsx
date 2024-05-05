@@ -109,8 +109,8 @@ const pl = {
 		null: "wszystko jest w zapasie",
 	},
 	substitutes: {
-		title: "zamienniki kolorów mulin",
-		navigationLink: "zamienniki kolorów",
+		title: "kolory mulin",
+		navigationLink: "kolory mulin",
 		null: "jeszcze nic tu nie ma",
 	},
 	threads: {

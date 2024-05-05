@@ -53,7 +53,7 @@ const navigationLinks = {
 	historyNav: [
 		{
 			id: "main-navigation-home-button",
-			link: `/`,
+			link: `/home`,
 			label: pl.navigation.home,
 			icon: faHouse,
 		},

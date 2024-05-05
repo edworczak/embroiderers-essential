@@ -11,7 +11,7 @@ export const IconButtonWrapper = styled.div`
 	button {
 		align-items: center;
 		background: transparent;
-		//border: 1px solid ${theme.colours.CTA};
+		border: 0;
 		border-radius: 50vh;
 		box-sizing: border-box;
 		color: ${theme.typography.colours.link};

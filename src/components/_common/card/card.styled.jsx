@@ -58,6 +58,7 @@ export const CardCTAsWrapperStyled = styled.div`
 	display: flex;
 	gap: ${theme.sizes.spacings.default};
 	justify-content: flex-end;
+		min-width: 57px;
 	padding: ${theme.sizes.spacings.small};
 `;
 export const CardStyled = styled.div`
@@ -66,7 +67,6 @@ export const CardStyled = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	min-height: 112px;
     ${(props) => (props.$exactMatch ? "order: -1" : "")};
 	overflow: hidden;
 	position: relative;

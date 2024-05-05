@@ -17,6 +17,7 @@ const NewProjectPage = () => {
 	const [finished, setFinished] = useState(false);
 	const [finishDate, setFinishDate] = useState("");
 	const [hoop, setHoop] = useState("");
+	const [img, setImg] = useState("");
 
 	const todayDate = new Date().toISOString().split("T")[0];
 	const id = "proj" + Math.floor(Math.random() * 10000000);
@@ -30,6 +31,7 @@ const NewProjectPage = () => {
 			finished: finished,
 			finishDate: finished ? finishDate : "",
 			hoop: hoop,
+			img: img,
 		}));
 	}
 
@@ -51,6 +53,7 @@ const NewProjectPage = () => {
 					minDate={startDate}
 					maxDate={todayDate}
 				/>
+				<Input label={"link do zdjęcia"} id={"image-link"} type={"url"} setState={setImg} />
 			</Row>
 			<Row lightBackground={true} contentToEnd={true} contentInRow={true}>
 				<IconButton icon={faXmark} label={"anuluj"} onClick={"/projects"} />

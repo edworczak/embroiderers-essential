@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { theme } from "../../shared-styles/theme.styled";
 
@@ -28,4 +28,10 @@ export const ProjectImageWrapper = styled.div`
 		object-fit: cover;
 		width: 100%;
 	}
+		
+		${(props) => props.$placeholderImage ? css`
+        @media screen and (${theme.sizes.breakpoints.mobileDown}) {
+            display: none;
+        }
+		` : ""}
 `;
