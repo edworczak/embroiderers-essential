@@ -4,7 +4,6 @@ import {
 	faCartShopping,
 	faGears,
 	faHouse,
-	faPalette,
 	faPenRuler,
 	faSwatchbook,
 } from "@fortawesome/free-solid-svg-icons";
@@ -24,12 +23,6 @@ const navigationLinks = {
 			link: `/threads`,
 			label: pl.threads.navigationLink,
 			icon: faBoxesStacked,
-		},
-		{
-			id: "main-navigation-palettes-button",
-			link: `/palettes`,
-			label: pl.palettes.navigationLink,
-			icon: faPalette,
 		},
 		{
 			id: "main-navigation-shopping-list-button",

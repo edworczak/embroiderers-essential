@@ -1,18 +1,26 @@
 # embroiderer-essential
 
 I want this app to be embroiderer's best friend. I'm a fellow embroiderer and found a need to keep all my info in one place. Current plan is to include features:
-* My projects
-  * Timer
-* My thread palettes
+* Login page
+* Projects
+  * Timer to track time in project (not MVP)
+  * Add used thread colours
+  * Track start and finish dates
+  * Note your budget and basic info
+* Thread colour palettes (not MVP)
 * Shopping list
-  * Adding thread colours from thread collection, basic embroidery supplies and input for user's text
-* Thread collection checklist
-* Thread colours substitutes (you can find demo [here](https://edworczak.github.io/embroiderer-essential/))
+  * Adding thread colours from thread collection
+  * Input for user's text
+* Threads in stock
+  * Search threads in stock
+  * Add thread colours to shopping list
+* Thread colours aka Thread Colours Substitutes (you can find demo [here](https://edworczak.github.io/embroiderer-essential/))
+  * Search thread colours
+  * Add colours to stock or shopping list
 * Utility pages
   * Settings
   * Help
   * Profile
-  * Search
 
 If you have any ideas on your own raise them in [Issues](https://github.com/edworczak/ebroiderers-essential/issues) section. If you speak Polish join our handcraft Discord server [Koło Gospodyń Internetowych](https://discord.gg/HqNVstmPDV).
 
@@ -33,5 +41,5 @@ If you have any ideas on your own raise them in [Issues](https://github.com/edwo
 
 [Convert CSV to JSON](https://www.convertcsv.com/csv-to-json.htm)
 
-###Design
-Design is created by me on the go!
+### Design
+Design is created by me on the go! It's going well so far.
