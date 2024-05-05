@@ -1,5 +1,6 @@
 import { faClockRotateLeft, faFlagCheckered, faPencil, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import IconButton from "../../components/_common/icon-button/icon-button";
 import Heading from "../../components/_common/layout/heading";
@@ -16,7 +17,7 @@ import { theme } from "../../shared-styles/theme.styled";
 import { ProjectHeader, ProjectImageWrapper } from "./project.styled";
 
 const ProjectInfoPage = () => {
-	const projects = dummyUser.projects;
+	const projects = useSelector((state) => state.userProjects.value);
 	const [project, setProject] = useState("");
 
 	const projectCost = () => {

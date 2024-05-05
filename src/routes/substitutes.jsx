@@ -1,4 +1,3 @@
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 import Heading from "../components/_common/layout/heading";
@@ -14,7 +13,7 @@ const SubstitutesPage = () => {
 
 	return (
 		<>
-			<Heading title={pl.substitutes.title} CTA={{ label: "szukaj", icon: faSearch, onClick: "/search" }} />
+			<Heading title={pl.substitutes.title} />
 			<Search setState={setSearchTerm}/>
 			<RowStyled>
 				<List maxColumns={2}>

@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import dummyUser from "../../data/dummyUser";
 import pl from "../../data/pl";
 import List from "../list/list";
 import ProjectButton from "../project-button/project-button";
@@ -12,7 +11,7 @@ import { updateOpenProjectsCount } from "./slice/open-projects-count";
 const ProjectsList = (props) => {
 	const { isOpenProjects = false, isFinishedProjects = false } = props;
 	const dispatch = useDispatch();
-	const projects = Object.values(dummyUser.projects);
+	const projects = Object.values(useSelector((state) => state.userProjects.value));
 	let openProjectsCount = 0;
 	let finishedProjectsCount = 0;
 
