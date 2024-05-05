@@ -32,6 +32,11 @@ If you have any ideas on your own raise them in [Issues](https://github.com/edwo
 * `npm run lint` – run linter in project
 * `build-github` – update files for GitHub Pages
 
+### Next steps (to do list)
+1. Fix issue with project properties
+2. Project dialog 
+   * Push new saved project to store
+   * Save state of existing project
 ## Licenses
 [FortAwesome](https://github.com/FortAwesome):
 * [React FontAwesome](https://github.com/FortAwesome/react-fontawesome)
