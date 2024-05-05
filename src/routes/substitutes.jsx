@@ -27,7 +27,7 @@ const SubstitutesPage = () => {
 								cartCTA={true}
 								smallButtons={true}
 								showSubstitutes={true}
-								searchTerm={searchTerm}
+								searchTerm={searchTerm.toLowerCase()}
 							/>
 						);
 					})}

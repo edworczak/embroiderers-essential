@@ -17,8 +17,10 @@ const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, delete
 		return colour.id === colourID;
 	})[0];
 
-	const isSearchTerm =  colour.name.includes(searchTerm);
-	const isSearchExactMatch =  colour.name.toLowerCase() === searchTerm.toLowerCase();
+	const unifiedName = colour.name.toLowerCase();
+
+	const isSearchTerm =  unifiedName.includes(searchTerm);
+	const isSearchExactMatch =  unifiedName === searchTerm;
 
 	if (!isSearchTerm) return null;
 
