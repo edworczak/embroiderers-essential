@@ -15,6 +15,11 @@ export const GlobalStyles = createGlobalStyle`
     * {
       box-sizing: border-box;
     }
+		
+		input {
+        font-family: ${theme.typography.fontFamily};
+        font-size: ${theme.typography.fontSize.default};
+		}
     
     p {
       margin: 0 0 0;

@@ -1,4 +1,4 @@
-import { HeadingPrimary, HeadingRow, Row } from "../app/app.styled";
+import { HeadingPrimaryStyled, HeadingRowStyled, RowStyled } from "../components/_common/layout/layout.styled";
 import Colour from "../components/colour/colour";
 import List from "../components/list/list";
 import colours from "../data/colours";
@@ -6,11 +6,11 @@ import pl from "../data/pl";
 
 const SubstitutesPage = () => {
 	return (
-		<div>
-			<HeadingRow>
-				<HeadingPrimary>{pl.substitutes.title}</HeadingPrimary>
-			</HeadingRow>
-			<Row>
+		<>
+			<HeadingRowStyled>
+				<HeadingPrimaryStyled>{pl.substitutes.title}</HeadingPrimaryStyled>
+			</HeadingRowStyled>
+			<RowStyled>
 				<List maxColumns={2}>
 					{colours.map((colour) => {
 						return (
@@ -25,8 +25,8 @@ const SubstitutesPage = () => {
 						);
 					})}
 				</List>
-			</Row>
-		</div>
+			</RowStyled>
+		</>
 	);
 };
 

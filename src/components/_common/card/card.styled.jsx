@@ -5,7 +5,7 @@ import { theme } from "../../../shared-styles/theme.styled";
 export const CardContentStyled = styled.div`
 	display: flex;
 	width: 100%;
-		
+
 	> a {
 		display: flex;
 		height: 100%;
@@ -25,6 +25,9 @@ export const CardThumbnailStyled = styled.div`
 	border-right: 4px solid ${theme.colours.kashmir};
 	height: 100%;
 	margin-left: ${theme.sizes.spacings.default};
+	overflow: hidden;
+	position: relative;
+	transition: all 300ms ease-in-out;
 	width: 100px;
 
 	@media screen and (${theme.sizes.breakpoints.largeScreenDown}) {
@@ -37,6 +40,17 @@ export const CardThumbnailStyled = styled.div`
 
 	@media screen and (${theme.sizes.breakpoints.smallestScreenDown}) {
 		width: 40px;
+	}
+
+	span {
+		background: ${theme.palette.darkBackground};
+		border-radius: 0 50vh 50vh 0;
+		box-shadow: ${theme.decorations.shadow};
+		display: inline-block;
+		left: -4px;
+		padding: ${theme.sizes.spacings.small};
+		position: absolute;
+		top: ${theme.sizes.spacings.default};
 	}
 `;
 

@@ -6,6 +6,10 @@ export const ProjectHeader = styled.div`
 	background-color: ${theme.colours.white};
 	display: flex;
 	gap: 0;
+
+	@media screen and (${theme.sizes.breakpoints.mobileDown}) {
+		flex-direction: column-reverse;
+	}
 `;
 export const ProjectInfo = styled.div`
 	display: flex;
@@ -19,6 +23,7 @@ export const ProjectImageWrapper = styled.div`
 	max-height: 500px;
 
 	img {
+		aspect-ratio: 1 / 1;
 		height: 100%;
 		object-fit: cover;
 		width: 100%;

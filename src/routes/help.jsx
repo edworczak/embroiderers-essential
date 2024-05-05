@@ -1,10 +1,13 @@
+import { HeadingPrimaryStyled, HeadingRowStyled } from "../components/_common/layout/layout.styled";
 import pl from "../data/pl";
 
 const HelpPage = () => {
 	return (
-		<div>
-			<h1>{pl.help.title}</h1>
-		</div>
+		<>
+			<HeadingRowStyled>
+				<HeadingPrimaryStyled>{pl.help.title}</HeadingPrimaryStyled>
+			</HeadingRowStyled>
+		</>
 	);
 };
 

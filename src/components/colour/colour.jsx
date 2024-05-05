@@ -3,16 +3,21 @@ import PropTypes from "prop-types";
 
 import brandNames from "../../data/brandNames";
 import colours from "../../data/colours";
+import dummyUser from "../../data/dummyUser";
 import Card from "../_common/card/card";
 import { CardCTAsWrapperStyled } from "../_common/card/card.styled";
 import CardContent from "../_common/card/cardContent";
+import IconButton from "../_common/icon-button/icon-button";
 import TableBody from "../_common/table/table-body";
 import TableRow from "../_common/table/table-row";
-import IconButton from "../_common/icon-button/icon-button";
 import { ColourName } from "./colour.styled";
 
 const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, deleteCTA, showSubstitutes = false }) => {
 	const colour = colours.filter((colour) => {
+		return colour.id === colourID;
+	})[0];
+
+	const isInStock = dummyUser.threads.filter((colour) => {
 		return colour.id === colourID;
 	})[0];
 
@@ -22,7 +27,7 @@ const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, delete
 
 	return (
 		<Card>
-			<CardContent colour={colour.rgb}>
+			<CardContent colour={colour.rgb} checkIcon={!!isInStock}>
 				<ColourName>
 					<span>{colour.brand}</span> {colour.name}
 				</ColourName>
@@ -36,10 +41,10 @@ const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, delete
 				)}
 			</CardContent>
 			<CardCTAsWrapperStyled>
-				{deleteCTA && <IconButton icon={faTrashCan} text={"usuń"} iconOnly={true} />}
-				{editCTA && <IconButton icon={faPencil} text={"edytuj"} iconOnly={true} />}
-				{cartCTA && <IconButton icon={faCartShopping} text={"dodaj do listy zakupów"} iconOnly={true} />}
-				{collectionCTA && <IconButton icon={faBoxesStacked} text={"do zapasów"} iconOnly={true} />}
+				{deleteCTA && <IconButton icon={faTrashCan} label={"usuń"} iconOnly={true} onClick={"#"} />}
+				{editCTA && <IconButton icon={faPencil} label={"edytuj"} iconOnly={true} onClick={"#"} />}
+				{cartCTA && <IconButton icon={faCartShopping} label={"dodaj do listy zakupów"} iconOnly={true} onClick={"#"} />}
+				{collectionCTA && <IconButton icon={faBoxesStacked} label={"do zapasów"} iconOnly={true} onClick={"#"} />}
 			</CardCTAsWrapperStyled>
 		</Card>
 	);

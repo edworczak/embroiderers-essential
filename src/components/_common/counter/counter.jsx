@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import { CounterStyled } from "./counter.styled";
 
 const Counter = ({ counterNumber, text }) => {

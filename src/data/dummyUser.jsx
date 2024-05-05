@@ -6,6 +6,7 @@ const dummyUser = {
 	user: {
 		name: "Ewa",
 		language: "pl",
+		currency: "zł",
 	},
 	projects: projects,
 	shoppingList: shoppingList,

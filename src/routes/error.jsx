@@ -1,8 +1,12 @@
+import { HeadingPrimaryStyled, HeadingRowStyled } from "../components/_common/layout/layout.styled";
+
 const Error = () => {
 	return (
-		<div>
-			<h1>wyskoczył błąd</h1>
-		</div>
+		<>
+			<HeadingRowStyled>
+				<HeadingPrimaryStyled>wyskoczył błąd</HeadingPrimaryStyled>
+			</HeadingRowStyled>
+		</>
 	);
 };
 

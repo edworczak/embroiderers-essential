@@ -1,12 +1,12 @@
-import { HeadingPrimary, HeadingRow } from "../app/app.styled";
+import { HeadingPrimaryStyled, HeadingRowStyled } from "../components/_common/layout/layout.styled";
 import pl from "../data/pl";
 
 const SearchPage = () => {
 	return (
 		<>
-			<HeadingRow>
-				<HeadingPrimary>{pl.search.title}</HeadingPrimary>
-			</HeadingRow>
+			<HeadingRowStyled>
+				<HeadingPrimaryStyled>{pl.search.title}</HeadingPrimaryStyled>
+			</HeadingRowStyled>
 		</>
 	);
 };

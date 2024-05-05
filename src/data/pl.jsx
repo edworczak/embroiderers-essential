@@ -45,6 +45,26 @@ const pl = {
 		add: "nowy projekt",
 	},
 	project: {
+		dialog: {
+			title: {
+				label: "tytuł",
+				type: "text",
+				required: true,
+			},
+			startDate: {
+				label: "tytuł",
+				type: "date",
+				required: true,
+			},
+			finished: {
+				label: "tytuł",
+				type: "checkbox",
+			},
+			finishDate: {
+				label: "tytuł",
+				type: "date",
+			},
+		},
 		start: {
 			default: "data rozpoczęcia",
 			short: "start",
@@ -71,6 +91,11 @@ const pl = {
 		},
 		budget: {
 			default: "budżet",
+			null: "nie dodano żadnych informacji",
+			CTA: "edytuj budżet",
+			profit: "zysk",
+			price: "cena",
+			cost: "koszt",
 		},
 	},
 	palettes: {

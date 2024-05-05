@@ -1,11 +1,11 @@
 import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
-import { HeadingCTAWrapper, HeadingRow, Row } from "../app/app.styled";
-import Colour from "../components/colour/colour";
 import Card from "../components/_common/card/card";
 import { CardCTAsWrapperStyled } from "../components/_common/card/card.styled";
 import CardContent from "../components/_common/card/cardContent";
 import IconButton from "../components/_common/icon-button/icon-button";
+import { HeadingRowStyled, RowStyled } from "../components/_common/layout/layout.styled";
+import Colour from "../components/colour/colour";
 import List from "../components/list/list";
 import dummyUser from "../data/dummyUser";
 import pl from "../data/pl";
@@ -13,15 +13,12 @@ import pl from "../data/pl";
 const ShoppingListPage = () => {
 	return (
 		<div>
-			<HeadingRow>
+			<HeadingRowStyled>
 				<h1>{pl.shoppingList.title}</h1>
-				<HeadingCTAWrapper>
-					<IconButton icon={faPlus} text={"dodaj do listy"} />
-				</HeadingCTAWrapper>
-			</HeadingRow>
-			<Row>
-				{!dummyUser.shoppingList.threads && pl.shoppingList.null}
-				{dummyUser.shoppingList.threads && (
+				<IconButton icon={faPlus} text={"dodaj do listy"} />
+			</HeadingRowStyled>
+			<RowStyled>
+				{dummyUser.shoppingList.threads ? (
 					<List maxColumns={2}>
 						{dummyUser.shoppingList.threads.map((colour) => {
 							return (
@@ -35,9 +32,11 @@ const ShoppingListPage = () => {
 							);
 						})}
 					</List>
+				) : (
+					pl.shoppingList.null
 				)}
-			</Row>
-			<Row>
+			</RowStyled>
+			<RowStyled>
 				{dummyUser.shoppingList.others && (
 					<List maxColumns={2}>
 						{dummyUser.shoppingList.others.map((item) => {
@@ -52,7 +51,7 @@ const ShoppingListPage = () => {
 						})}
 					</List>
 				)}
-			</Row>
+			</RowStyled>
 		</div>
 	);
 };

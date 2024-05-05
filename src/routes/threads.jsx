@@ -1,8 +1,8 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-import { HeadingPrimary, HeadingRow, Row } from "../app/app.styled";
-import Colour from "../components/colour/colour";
 import IconButton from "../components/_common/icon-button/icon-button";
+import { HeadingPrimaryStyled, HeadingRowStyled, RowStyled } from "../components/_common/layout/layout.styled";
+import Colour from "../components/colour/colour";
 import List from "../components/list/list";
 import dummyUser from "../data/dummyUser";
 import pl from "../data/pl";
@@ -10,11 +10,11 @@ import pl from "../data/pl";
 const ThreadsPage = () => {
 	return (
 		<>
-			<HeadingRow $useFlex={true} $justify={"space-between"} $align={"center"}>
-				<HeadingPrimary>{pl.threads.title}</HeadingPrimary>
+			<HeadingRowStyled $useFlex={true} $justify={"space-between"} $align={"center"}>
+				<HeadingPrimaryStyled>{pl.threads.title}</HeadingPrimaryStyled>
 				<IconButton icon={faPlus} text={"dodaj do zapasów"} />
-			</HeadingRow>
-			<Row>
+			</HeadingRowStyled>
+			<RowStyled>
 				{!dummyUser.threads && pl.threads.null}
 				{dummyUser.threads && (
 					<List maxColumns={2}>
@@ -25,7 +25,7 @@ const ThreadsPage = () => {
 						})}
 					</List>
 				)}
-			</Row>
+			</RowStyled>
 		</>
 	);
 };

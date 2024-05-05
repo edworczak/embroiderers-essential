@@ -1,8 +1,11 @@
+import { baseColours } from "./base-colours.styled";
+
 export const palette = {
-	kashmir: "#f1ede9",
-	CTA: "#006989",
-	CTAHover: "#007090",
-	highlight: "#2F195F",
-	dark: "#0F1020",
-	white: "#FFFFFF",
+	lightBackground: baseColours.white,
+	darkBackground: baseColours.kashmir,
+	CTA: baseColours.CTA,
+	CTAHover: baseColours.CTAHover,
+	highlight: baseColours.highlight,
+	dark: baseColours.dark,
+	white: baseColours.white,
 };

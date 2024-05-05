@@ -4,6 +4,7 @@ import Error from "../routes/error";
 import HelpPage from "../routes/help";
 import Home from "../routes/home";
 import Layout from "../routes/layout";
+import NewProjectPage from "../routes/new-project";
 import PalettesPage from "../routes/palettes";
 import ProfilePage from "../routes/profile";
 import ProjectsPage from "../routes/projects";
@@ -20,6 +21,7 @@ const App = () => {
 			<Route path="/" element={<Layout />}>
 				<Route index element={<Home />} />
 				<Route path="projects" element={<ProjectsPage />} />
+				<Route path="new-project" element={<NewProjectPage />} />
 				<Route path="projects/project" element={<ProjectPage />} />
 				<Route path="palettes" element={<PalettesPage />} />
 				<Route path="threads" element={<ThreadsPage />} />

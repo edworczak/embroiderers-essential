@@ -8,6 +8,7 @@ export const sizes = {
 		largeScreenDown: "max-width: 1072px",
 	},
 	spacings: {
+		smallest: "4px",
 		small: "8px",
 		default: "16px",
 		big: "32px",

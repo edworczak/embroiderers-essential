@@ -1,10 +1,13 @@
+import { HeadingPrimaryStyled, HeadingRowStyled } from "../components/_common/layout/layout.styled";
 import pl from "../data/pl";
 
 const ProfilePage = () => {
 	return (
-		<div>
-			<h1>{pl.profile.title}</h1>
-		</div>
+		<>
+			<HeadingRowStyled>
+				<HeadingPrimaryStyled>{pl.profile.title}</HeadingPrimaryStyled>
+			</HeadingRowStyled>
+		</>
 	);
 };
 

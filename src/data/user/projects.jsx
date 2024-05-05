@@ -6,9 +6,24 @@ export const projects = [
 		time: "5:12",
 		hoop: "12",
 		budget: {
-			hoop: 24,
-			materials: 20,
 			price: 120,
+			costs: [
+				{
+					id: "cost1",
+					label: "tamborek",
+					cost: 24,
+				},
+				{
+					id: "cost2",
+					label: "muliny",
+					cost: 8,
+				},
+				{
+					id: "cost3",
+					label: "materiał",
+					cost: 4,
+				},
+			],
 		},
 		threads: [
 			{
