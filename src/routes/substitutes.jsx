@@ -1,4 +1,5 @@
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 import Heading from "../components/_common/layout/heading";
 import { RowStyled } from "../components/_common/layout/layout.styled";
@@ -6,11 +7,15 @@ import Colour from "../components/colour/colour";
 import List from "../components/list/list";
 import colours from "../data/colours";
 import pl from "../data/pl";
+import Search from "../components/_common/search/search";
 
 const SubstitutesPage = () => {
+	const [searchTerm, setSearchTerm] = useState("");
+
 	return (
 		<>
 			<Heading title={pl.substitutes.title} CTA={{ label: "szukaj", icon: faSearch, onClick: "/search" }} />
+			<Search setState={setSearchTerm}/>
 			<RowStyled>
 				<List maxColumns={2}>
 					{colours.map((colour) => {
@@ -22,6 +27,7 @@ const SubstitutesPage = () => {
 								cartCTA={true}
 								smallButtons={true}
 								showSubstitutes={true}
+								searchTerm={searchTerm}
 							/>
 						);
 					})}

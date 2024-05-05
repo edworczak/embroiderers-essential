@@ -12,10 +12,15 @@ import TableBody from "../_common/table/table-body";
 import TableRow from "../_common/table/table-row";
 import { ColourName } from "./colour.styled";
 
-const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, deleteCTA, showSubstitutes = false }) => {
+const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, deleteCTA, showSubstitutes = false, searchTerm = "" }) => {
 	const colour = colours.filter((colour) => {
 		return colour.id === colourID;
 	})[0];
+
+	const isSearchTerm =  colour.name.includes(searchTerm);
+	const isSearchExactMatch =  colour.name.toLowerCase() === searchTerm.toLowerCase();
+
+	if (!isSearchTerm) return null;
 
 	const isInStock = dummyUser.threads.filter((colour) => {
 		return colour.id === colourID;
@@ -26,7 +31,7 @@ const Colour = ({ colourID, description, collectionCTA, cartCTA, editCTA, delete
 	};
 
 	return (
-		<Card>
+		<Card exactMatch={isSearchExactMatch}>
 			<CardContent colour={colour.rgb} checkIcon={!!isInStock}>
 				<ColourName>
 					<span>{colour.brand}</span> {colour.name}
@@ -61,6 +66,7 @@ Colour.propTypes = {
 	deleteCTA: PropTypes.bool,
 	smallButtons: PropTypes.bool,
 	showSubstitutes: PropTypes.bool,
+	searchTerm: PropTypes.string,
 };
 
 export default Colour;

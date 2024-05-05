@@ -67,6 +67,7 @@ export const CardStyled = styled.div`
 	flex-direction: row;
 	justify-content: space-between;
 	min-height: 112px;
+    ${(props) => (props.$exactMatch ? "order: -1" : "")};
 	overflow: hidden;
 	position: relative;
 	transition: 300ms;
