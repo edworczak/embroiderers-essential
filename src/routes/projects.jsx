@@ -2,10 +2,8 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 
 import Counter from "../components/_common/counter/counter";
-import IconButton from "../components/_common/icon-button/icon-button";
+import Heading from "../components/_common/layout/heading";
 import {
-	HeadingPrimaryStyled,
-	HeadingRowStyled,
 	HeadingSecondaryStyled,
 	RowContentCenteredStyled,
 	RowStyled,
@@ -19,10 +17,7 @@ const ProjectsPage = () => {
 
 	return (
 		<>
-			<HeadingRowStyled>
-				<HeadingPrimaryStyled>{pl.projects.title}</HeadingPrimaryStyled>
-				<IconButton icon={faPlus} text={"nowy projekt"} onClick={"/new-project"} />
-			</HeadingRowStyled>
+			<Heading title={pl.projects.title} CTA={{ label: "nowy projekt", icon: faPlus, onClick: "/new-project" }} />
 			<RowStyled>
 				<HeadingSecondaryStyled>{pl.projects.openProjects}</HeadingSecondaryStyled>
 				<ProjectsList isOpenProjects={true} />

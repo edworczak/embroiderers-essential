@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 
 import Counter from "../components/_common/counter/counter";
-import { HeadingPrimaryStyled, HeadingSecondaryStyled, RowStyled } from "../components/_common/layout/layout.styled";
+import Heading from "../components/_common/layout/heading";
+import { HeadingPrimaryStyled } from "../components/_common/layout/layout.styled";
 import Row from "../components/_common/layout/row";
 import ProjectsList from "../components/projects-list/projects-list";
 import pl from "../data/pl";
@@ -21,10 +22,10 @@ const Home = () => {
 				<Counter counterNumber={finishedProjectsCount} text={pl.projects.finishedProjects} />
 				<Counter counterNumber={shoppingCount} text={pl.shoppingList.title} />
 			</Row>
-			<RowStyled>
-				<HeadingSecondaryStyled>{pl.projects.openProjects}</HeadingSecondaryStyled>
+			<Row>
+				<Heading title={pl.projects.openProjects} secondary={true} />
 				<ProjectsList isOpenProjects={true} />
-			</RowStyled>
+			</Row>
 		</>
 	);
 };

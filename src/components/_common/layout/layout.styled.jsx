@@ -54,6 +54,8 @@ export const RowStyled = styled(RowBaseStyled)`
 	${(props) => (props.$contentInRow ? "align-items: center" : "")};
 	flex-direction: ${(props) => (props.$contentInRow ? "row" : "column")};
 	${(props) => (props.$contentCentered ? "justify-content: center" : "")};
+	${(props) => (props.$contentToEnd ? "justify-content: flex-end" : "")};
+	${(props) => (props.$contentToEnd ? "margin-top: auto" : "")};
 	flex-wrap: wrap;
 `;
 

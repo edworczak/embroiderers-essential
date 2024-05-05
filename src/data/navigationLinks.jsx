@@ -6,7 +6,6 @@ import {
 	faHouse,
 	faPalette,
 	faPenRuler,
-	faSearch,
 	faSwatchbook,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -43,12 +42,6 @@ const navigationLinks = {
 			link: `/substitutes`,
 			label: pl.substitutes.navigationLink,
 			icon: faSwatchbook,
-		},
-		{
-			id: "main-navigation-search-button",
-			link: `/search`,
-			label: pl.search.navigationLink,
-			icon: faSearch,
 		},
 		{
 			id: "main-navigation-settings-button",

@@ -16,7 +16,7 @@ export const InputLabelStyled = styled.label`
 
 export const CheckboxStyled = styled.div`
 	align-items: center;
-	background: ${theme.palette.darkBackground};
+	background: ${theme.palette.lightBackground};
 	border-radius: 50vh;
 	display: flex;
 	height: 40px;
@@ -31,24 +31,35 @@ export const CheckboxStyled = styled.div`
 `;
 
 export const InputStyled = styled.input`
-	background: ${theme.palette.darkBackground};
-	border: 0;
+	background-color: ${theme.palette.lightBackground};
+	border: 2px solid ${theme.palette.lightBackground};
 	border-radius: 50vh;
 	min-height: 40px;
 	padding: ${theme.sizes.spacings.default};
+	transition: background-color 300ms ease-in-out;
+
+	&:disabled {
+		background-color: ${theme.palette.darkBackground};
+	}
+
+	&:focus,
+	&:active {
+		outline-color: ${theme.palette.CTA};
+
+		& + div {
+			outline-color: ${theme.palette.CTA};
+		}
+	}
 
 	&[type="checkbox"] {
 		height: 100%;
 		opacity: 0;
 		position: absolute;
 		width: 100%;
+		z-index: 1;
 
 		&:checked + div svg {
 			opacity: 1;
 		}
-	}
-
-	&:hover {
-		box-shadow: ${theme.decorations.shadow};
 	}
 `;

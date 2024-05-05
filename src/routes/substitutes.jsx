@@ -1,4 +1,7 @@
-import { HeadingPrimaryStyled, HeadingRowStyled, RowStyled } from "../components/_common/layout/layout.styled";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
+import Heading from "../components/_common/layout/heading";
+import { RowStyled } from "../components/_common/layout/layout.styled";
 import Colour from "../components/colour/colour";
 import List from "../components/list/list";
 import colours from "../data/colours";
@@ -7,9 +10,7 @@ import pl from "../data/pl";
 const SubstitutesPage = () => {
 	return (
 		<>
-			<HeadingRowStyled>
-				<HeadingPrimaryStyled>{pl.substitutes.title}</HeadingPrimaryStyled>
-			</HeadingRowStyled>
+			<Heading title={pl.substitutes.title} CTA={{ label: "szukaj", icon: faSearch, onClick: "/search" }} />
 			<RowStyled>
 				<List maxColumns={2}>
 					{colours.map((colour) => {

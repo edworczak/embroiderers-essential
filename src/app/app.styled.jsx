@@ -8,6 +8,9 @@ export const AppWrapper = styled.div`
 
 export const Content = styled.div`
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	padding-left: 200px;
 	width: 100%;
 

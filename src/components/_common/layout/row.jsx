@@ -2,9 +2,14 @@ import PropTypes from "prop-types";
 
 import { RowStyled } from "./layout.styled";
 
-const Row = ({ children, lightBackground, contentInRow, contentCentered }) => {
+const Row = ({ children, lightBackground, contentInRow, contentCentered, contentToEnd }) => {
 	return (
-		<RowStyled $lightBackground={lightBackground} $contentInRow={contentInRow} $contentCentered={contentCentered}>
+		<RowStyled
+			$lightBackground={lightBackground}
+			$contentInRow={contentInRow}
+			$contentCentered={contentCentered}
+			$contentToEnd={contentToEnd}
+		>
 			{children}
 		</RowStyled>
 	);

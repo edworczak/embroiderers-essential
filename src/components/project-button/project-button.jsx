@@ -20,8 +20,10 @@ const ProjectButton = ({ project }) => {
 				</ProjectTitleWrapper>
 			</CardContent>
 			<CardCTAsWrapperStyled>
-				<IconButton icon={faPencil} text={"edytuj"} iconOnly={true} />
-				{!project.finished && <IconButton icon={faClockRotateLeft} text={"zacznij sesję"} iconOnly={true} />}
+				<IconButton icon={faPencil} label={"edytuj"} iconOnly={true} onClick={"#"} />
+				{!project.finished && (
+					<IconButton icon={faClockRotateLeft} label={"zacznij sesję"} iconOnly={true} onClick={"#"} />
+				)}
 			</CardCTAsWrapperStyled>
 		</Card>
 	);
