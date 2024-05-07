@@ -10,29 +10,34 @@ import TableRow from "../_common/table/table-row";
 import { ProjectTitle, ProjectTitleWrapper } from "./project-button.styled";
 
 const ProjectButton = ({ project }) => {
-	return (
-		<Card alignCTAsToRight={true}>
-			<CardContent
-				url={`/projects/project?id=${project.id}`}
-				thumbnail={`url(${project.img ? project.img : theme.decorations.defaultImages.project})`}
-			>
-				<ProjectTitleWrapper>
-					<ProjectTitle>{project.name}</ProjectTitle>
-					{project.finishDate && <TableRow label={"ukończono"} text={project.finishDate}/>}
-				</ProjectTitleWrapper>
-			</CardContent>
-			<CardCTAsWrapperStyled>
-				<IconButton icon={faPencil} label={"edytuj"} iconOnly={true} onClick={`/project-dialog?id=${project.id}`} />
-				{!project.finished && (
-					<IconButton icon={faClockRotateLeft} label={"zacznij sesję"} iconOnly={true} onClick={"#"} />
-				)}
-			</CardCTAsWrapperStyled>
-		</Card>
-	);
+    return (
+        <Card alignCTAsToRight={true}>
+            <CardContent
+                url={`/projects/project?id=${project.id}`}
+                thumbnail={`url(${project.img ? project.img : theme.decorations.defaultImages.project})`}
+            >
+                <ProjectTitleWrapper>
+                    <ProjectTitle>{project.name}</ProjectTitle>
+                    {project.finishDate && <TableRow label={"ukończono"} text={project.finishDate} />}
+                </ProjectTitleWrapper>
+            </CardContent>
+            <CardCTAsWrapperStyled>
+                <IconButton
+                    icon={faPencil}
+                    label={"edytuj"}
+                    iconOnly={true}
+                    onClick={`/project-dialog?id=${project.id}`}
+                />
+                {!project.finished && (
+                    <IconButton icon={faClockRotateLeft} label={"zacznij sesję"} iconOnly={true} onClick={"#"} />
+                )}
+            </CardCTAsWrapperStyled>
+        </Card>
+    );
 };
 
 ProjectButton.propTypes = {
-	project: PropTypes.object,
+    project: PropTypes.object,
 };
 
 export default ProjectButton;

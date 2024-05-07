@@ -6,18 +6,16 @@ import store from "../../app/store";
 import { GlobalStyles } from "../../index.styled";
 
 const Layout = ({ children }) => {
-	return (
-		<Provider store={store}>
-			<GlobalStyles />
-			<AppWrapper>
-				{children}
-			</AppWrapper>
-		</Provider>
-	);
+    return (
+        <Provider store={store}>
+            <GlobalStyles />
+            <AppWrapper>{children}</AppWrapper>
+        </Provider>
+    );
 };
 
 Layout.propTypes = {
-	children: PropTypes.node,
-}
+    children: PropTypes.node,
+};
 
 export default Layout;

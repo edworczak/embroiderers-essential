@@ -9,45 +9,45 @@ import { updateFinishedProjectsCount } from "./slice/finished-projects-count";
 import { updateOpenProjectsCount } from "./slice/open-projects-count";
 
 const ProjectsList = (props) => {
-	const { isOpenProjects = false, isFinishedProjects = false } = props;
-	const dispatch = useDispatch();
-	const projects = Object.values(useSelector((state) => state.userProjects.value));
-	let openProjectsCount = 0;
-	let finishedProjectsCount = 0;
+    const { isOpenProjects = false, isFinishedProjects = false } = props;
+    const dispatch = useDispatch();
+    const projects = Object.values(useSelector((state) => state.userProjects.value));
+    let openProjectsCount = 0;
+    let finishedProjectsCount = 0;
 
-	if (!projects.length) return <p>{pl.projects.null}</p>;
+    if (!projects.length) return <p>{pl.projects.null}</p>;
 
-	projects.forEach((project) => {
-		if (project.finishDate) {
-			finishedProjectsCount++;
-		} else {
-			openProjectsCount++;
-		}
-	});
+    projects.forEach((project) => {
+        if (project.finishDate) {
+            finishedProjectsCount++;
+        } else {
+            openProjectsCount++;
+        }
+    });
 
-	useEffect(() => {
-		dispatch(updateOpenProjectsCount(openProjectsCount));
-		dispatch(updateFinishedProjectsCount(finishedProjectsCount));
-	}, []);
+    useEffect(() => {
+        dispatch(updateOpenProjectsCount(openProjectsCount));
+        dispatch(updateFinishedProjectsCount(finishedProjectsCount));
+    }, []);
 
-	return (
-		<List maxColumns={2}>
-			{projects.map((project) => {
-				if (!isOpenProjects && !isFinishedProjects) {
-					return <ProjectButton key={project.id} project={project} />;
-				} else if (isOpenProjects && !project.finished) {
-					return <ProjectButton key={project.id} project={project} />;
-				} else if (isFinishedProjects && project.finished) {
-					return <ProjectButton key={project.id} project={project} />;
-				}
-			})}
-		</List>
-	);
+    return (
+        <List maxColumns={2}>
+            {projects.map((project) => {
+                if (!isOpenProjects && !isFinishedProjects) {
+                    return <ProjectButton key={project.id} project={project} />;
+                } else if (isOpenProjects && !project.finished) {
+                    return <ProjectButton key={project.id} project={project} />;
+                } else if (isFinishedProjects && project.finished) {
+                    return <ProjectButton key={project.id} project={project} />;
+                }
+            })}
+        </List>
+    );
 };
 
 ProjectsList.propTypes = {
-	isOpenProjects: PropTypes.bool,
-	isFinishedProjects: PropTypes.bool,
+    isOpenProjects: PropTypes.bool,
+    isFinishedProjects: PropTypes.bool,
 };
 
 export default ProjectsList;

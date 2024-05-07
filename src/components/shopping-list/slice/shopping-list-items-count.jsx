@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const shoppingListItemsCountSlice = createSlice({
-	name: "shoppingListItemsCount",
-	initialState: {
-		value: 0,
-	},
-	reducers: {
-		updateShoppingListItemsCount: (state, action) => {
-			state.value = action.payload;
-		},
-	},
+    name: "shoppingListItemsCount",
+    initialState: {
+        value: 0,
+    },
+    reducers: {
+        updateShoppingListItemsCount: (state, action) => {
+            state.value = action.payload;
+        },
+    },
 });
 
 export const { updateShoppingListItemsCount } = shoppingListItemsCountSlice.actions;

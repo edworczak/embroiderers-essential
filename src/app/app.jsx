@@ -18,27 +18,27 @@ import SubstitutesPage from "../routes/substitutes";
 import ThreadsPage from "../routes/threads";
 
 const App = () => {
-	return (
-		<Routes>
-			<Route index element={<Login />} />
-			<Route path="/" element={<LoggedLayout />}>
-				<Route path="home" element={<Home />} />
-				<Route path="projects" element={<ProjectsPage />} />
-				<Route path="new-project" element={<NewProjectPage />} />
-				<Route path="/project-dialog" element={<ProjectDialogPage />} />
-				<Route path="projects/project" element={<ProjectPage />} />
-				<Route path="palettes" element={<PalettesPage />} />
-				<Route path="threads" element={<ThreadsPage />} />
-				<Route path="shoppinglist" element={<ShoppingListPage />} />
-				<Route path="substitutes" element={<SubstitutesPage />} />
-				<Route path="help" element={<HelpPage />} />
-				<Route path="profile" element={<ProfilePage />} />
-				<Route path="search" element={<SearchPage />} />
-				<Route path="settings" element={<SettingsPage />} />
-				<Route path="*" element={<Error />} />
-			</Route>
-		</Routes>
-	);
+    return (
+        <Routes>
+            <Route index element={<Login />} />
+            <Route path="/" element={<LoggedLayout />}>
+                <Route path="home" element={<Home />} />
+                <Route path="projects" element={<ProjectsPage />} />
+                <Route path="new-project" element={<NewProjectPage />} />
+                <Route path="/project-dialog" element={<ProjectDialogPage />} />
+                <Route path="projects/project" element={<ProjectPage />} />
+                <Route path="palettes" element={<PalettesPage />} />
+                <Route path="threads" element={<ThreadsPage />} />
+                <Route path="shoppinglist" element={<ShoppingListPage />} />
+                <Route path="substitutes" element={<SubstitutesPage />} />
+                <Route path="help" element={<HelpPage />} />
+                <Route path="profile" element={<ProfilePage />} />
+                <Route path="search" element={<SearchPage />} />
+                <Route path="settings" element={<SettingsPage />} />
+                <Route path="*" element={<Error />} />
+            </Route>
+        </Routes>
+    );
 };
 
 export default App;
