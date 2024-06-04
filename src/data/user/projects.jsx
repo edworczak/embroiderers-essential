@@ -1,8 +1,9 @@
 export const projects = [
     {
         id: "prj-test-1",
-        name: "Krowa",
+        name: "Test z kosztami i mulinami",
         startDate: "2024-04-10",
+        img: "https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         time: "5:12",
         hoop: "12",
         budget: {
@@ -70,7 +71,7 @@ export const projects = [
     },
     {
         id: "prj-test-2",
-        name: "Krowa w górach",
+        name: "Test",
         startDate: "2024-01-31",
         time: "0:00",
         hoop: "12",
@@ -331,7 +332,8 @@ export const projects = [
     {
         id: "prj0006",
         name: "Zelda",
-        finished: false,
+        finished: true,
+        finishDate: "2024-06-04",
         img: new URL("../../assets/img/demo/zelda.jpeg", import.meta.url).href,
         hoop: "12",
         fabric: "surowa bawełna",
@@ -421,7 +423,8 @@ export const projects = [
     {
         id: "prj0007",
         name: "Pierwszy ptaszor",
-        finished: false,
+        finished: true,
+        finishDate: "2024-06-03",
         img: new URL("../../assets/img/demo/ptaszor-1.jpeg", import.meta.url).href,
         hoop: "12",
         fabric: "ciemnozielony drelich",
